@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Contact.css'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiOutlineFacebook, AiOutlineWhatsApp ,AiOutlineMail} from 'react-icons/ai'
-
+import Loader from '../../static/images/sun2.gif'
+import $ from 'jquery'
 const Cntact = () => {
      const notify = () => toast.success('🦄 Mail Sended', {
                 position: "top-right",
@@ -18,25 +19,37 @@ const Cntact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-   
+   $('.msg').html(`<h3>Sending...</h3>`);
+ 
     emailjs.sendForm('service_qog4csa', 'template_7ooi7g6', form.current, '8AnB9nzXg3iA1Rt0A')
       .then((result) => {
+        $('.msg').html('<h3>Message Sent</h3>');
         console.log(result.text);
         console.log('sdsaf')
         e.target.reset();
         notify();
+           setTimeout(() => {
+      $('.msg').html(`<h3>Send Message</h3>`);
+    }
+      , 2000);
       }, (error) => {
           console.log(error.text);
       });
   };
 
 
+ 
+
+
+
+  const style = {
+  width: '2%',
+}
 
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
       <h2>Contact me</h2>
-
       <div className="container con__container">
         <div className="con__options">
           <article className="contact__option">
@@ -67,7 +80,7 @@ const Cntact = () => {
           <input type="text"  name="name" id="" placeholder='Full Name' required/>
           <input type="email"  name="email" id="" placeholder='Email' required/>
           <textarea name="message" id="" cols="30" rows="10" placeholder='Message'></textarea>
-          <input type="submit" value="Send Message"  className='btn btn-primary'/>
+          <button type="submit" value="Send Message" className='btn btn-primary' id='sub_button'><span className='msg'>Send Message</span></button>
         </form>
       </div>
     </section>
