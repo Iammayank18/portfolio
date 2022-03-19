@@ -129,8 +129,7 @@ img{
     margin-top: 4rem;
     transition: all 400ms ease;
 }
-
-/* header {
-    height: 80vh;
-} */
+.btn{
+        font-size: 12px;
+}
 }
