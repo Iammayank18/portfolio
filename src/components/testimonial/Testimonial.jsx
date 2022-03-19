@@ -6,7 +6,7 @@ import C3 from '../../static/images/c3.avif'
 import C4 from '../../static/images/c4.avif'
 
 // import Swiper core and required modules
-import { Navigation, Pagination,Autoplay } from 'swiper';
+import { Pagination,Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -26,7 +26,7 @@ const data = [
     {
   id: 2,
   name: 'client 1',
-  img: C3,
+  img: C2,
   text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae autem placeat fuga dolores!'
   } ,
      {

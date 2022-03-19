@@ -8,7 +8,7 @@ import Portfolio from './portfolio/Portfolio';
 import Testimonial from './testimonial/Testimonial';
 import Contact from './contact/Contact';
 import Footer from './footer/Footer';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 const App = () => {
   return (
     <>

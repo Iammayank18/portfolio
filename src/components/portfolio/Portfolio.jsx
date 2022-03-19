@@ -5,7 +5,6 @@ import I3 from '../../static/images/p3.webp'
 import I4 from '../../static/images/p4.webp'
 import I5 from '../../static/images/p5.webp'
 import I6 from '../../static/images/p6.webp'
-import I7 from '../../static/images/p7.webp'
 import './Portfolio.css'
 
 const data = [

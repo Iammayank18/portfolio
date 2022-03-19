@@ -43,7 +43,7 @@ const Cntact = () => {
             <AiOutlineMail className='con__icon'/>
             <h4>Email</h4>
             <h5>mayank.sanyank@gmail.com</h5>
-            <a href="mailto:mayank.sanyank@gmail.com" target="_blank">Send Message</a>
+            <a href="mailto:mayank.sanyank@gmail.com" rel="noreferrer" target="_blank">Send Message</a>
           </article>
        
         
@@ -51,7 +51,7 @@ const Cntact = () => {
             <AiOutlineFacebook className='con__icon'/>
             <h4>Messenger</h4>
             <h5>Mayank</h5>
-            <a href="mailto:mayank.sanyank@gmail.com" target="_blank">Send Message</a>
+            <a href="mailto:mayank.sanyank@gmail.com" rel="noreferrer" target="_blank">Send Message</a>
           </article>
       
      
@@ -59,7 +59,7 @@ const Cntact = () => {
             <AiOutlineWhatsApp className='con__icon'/>
             <h4>Whatsapp</h4>
             <h5>Mayank</h5>
-            <a href="mailto:mayank.sanyank@gmail.com" target="_blank">Send Message</a>
+            <a href="mailto:mayank.sanyank@gmail.com" rel="noreferrer" target="_blank">Send Message</a>
        
           </article>
           </div>
