@@ -77,24 +77,6 @@ input,textarea{
 .form2{
     height: 170px;
 }
-
-@media screen and (max-width:600px) {
-    .left{
-        display: none;
-    }
-    .pop__container{
-        width: 90%;
-        height: 90%;
-        left:22px;
-        top: 37px;
-    }
-    .close {
-    width: 14%;
-    padding: 10px;
-    cursor: pointer;
-}
-}
-
 @media screen and (max-width:1024px) {
     .close {
     width: 6%;
@@ -109,3 +91,21 @@ input,textarea{
     top: 19%;
     }
 }
+@media screen and (max-width:600px) {
+    .left{
+        display: none;
+    }
+    .pop__container{
+         width: 90%;
+    height: 81%;
+    left: 18px;
+    top: 22px;
+
+    }
+    .close {
+    width: 14%;
+    padding: 10px;
+    cursor: pointer;
+}
+}
+
