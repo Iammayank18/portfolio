@@ -10,6 +10,7 @@ import Contact from './contact/Contact';
 import Footer from './footer/Footer';
 import Darkmode from './darkmode/Darkmode';
 import { ToastContainer } from 'react-toastify';
+import { Pop } from './popupForm/Pop';
 const App = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const App = () => {
         <Contact />
       <Footer />
       <Darkmode />
+      <Pop />
       <ToastContainer
 position="top-right"
 autoClose={1000}

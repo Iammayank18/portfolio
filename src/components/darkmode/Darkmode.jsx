@@ -24,6 +24,7 @@ const Darkmode = () => {
             $('.contact__option').css('background-color', '#3e3e60');
             $('#footer').css('background-color', '#3e3e60');
             $('nav').css('background-color', 'rgba(17, 25, 40, 0.79)');
+            $('.pop__container').css('background-color', '  rgba(17, 25, 40, 0.75)');
             localStorage.setItem('dark', 'true');
         } else {
             setBut(<ImSun className='mode_icon'/>);
@@ -38,6 +39,7 @@ const Darkmode = () => {
              $('.contact__option').css('background-color', '#fff');
              $('#footer').css('background-color', '#fff');
             $('nav').css('background-color', '#DDDDDD');
+            $('.pop__container').css('background-color', 'rgb(205 205 205 / 75%)');
             
             
             localStorage.setItem('dark', 'false');

@@ -3,8 +3,13 @@ import M1 from '../../static/images/mak2.jpeg'
 import { FiAward } from 'react-icons/fi'
 import { AiOutlineUsergroupAdd } from 'react-icons/ai'
 import { BiLibrary } from 'react-icons/bi'
+import $ from 'jquery'
 import './About.css'
 const About = () => {
+   const ShowPop = () => { 
+    $("#PopUp").fadeIn(500);
+  }
+    
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -37,7 +42,7 @@ const About = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laboriosam facilis quo animi aut doloribus, nulla natus delectus rerum necessitatibus, maiores quasi vitae. Commodi blanditiis assumenda doloremque pariatur laboriosam rem.
           </p>
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+          <button onClick={ShowPop} className='btn btn-primary'>Let's Talk</button>
         </div>
       </div>
     </section>
