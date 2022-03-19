@@ -8,6 +8,7 @@ import Portfolio from './portfolio/Portfolio';
 import Testimonial from './testimonial/Testimonial';
 import Contact from './contact/Contact';
 import Footer from './footer/Footer';
+import Darkmode from './darkmode/Darkmode';
 import { ToastContainer } from 'react-toastify';
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
        <Testimonial/>
         <Contact />
       <Footer />
+      <Darkmode />
       <ToastContainer
 position="top-right"
 autoClose={1000}

@@ -18,9 +18,25 @@
     --container-lg:80%;
     --container-md:90%;
     --container-sm:85%;
-
     --transition:all 400ms ease;
    
+}
+
+
+.light-theme {
+   --colo-bg: #f6f6f6;
+     --colo-bg-light: #3e3e60;
+    --color-primary: #20585f;
+    --color-white: rgb(17, 49, 76);
+    --color-light: #707070b2;
+}
+
+.dark-theme {
+     --colo-bg: #1f1f38;
+     --colo-bg-light: #3e3e60;
+    --color-primary: #00e1ff;
+    --color-white: #fff;
+    --color-light: #f5f5f5b2;
 }
 
 
@@ -106,6 +122,7 @@ img{
     object-fit: cover;
   
 }
+
 
 
 /*============== for tablet ================= */
