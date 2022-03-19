@@ -1,0 +1,67 @@
+.exp_container{
+   display:  grid;
+   grid-template-columns: 1fr 1fr;
+   gap:2rem;
+}
+.exp_container>div{
+    background: var(--colo-bg-light);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition:all 400ms ease;
+    width: 73%;
+    margin: 0 auto;
+}
+
+.exp_container>div:hover{
+    border: 1px solid var(--color-primary);
+    background: transparent;
+}
+
+.exp_container>div h3{
+    text-align: center ;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.exp_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.exp_details{
+   display: flex;
+   gap: 1rem;
+}
+
+.exp_details-icon{
+     margin-top: 6px;
+     color: var(--color-primary);
+}
+
+/*============= for tablet============ */
+
+@media screen and (max-width:1024px) {
+.exp_container{
+   grid-template-columns:1fr;
+}
+.exp_container>div{
+    width: 88%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+}
+
+/*========= for mobile phone ======== */
+
+@media screen and (max-width:600px) {
+.exp_container{
+   gap: 1rem;
+}
+.exp_container>div{
+    width: 100%;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+}

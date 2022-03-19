@@ -1,0 +1,74 @@
+.container.con__container{
+    width: 58% ;
+    display: grid;
+    grid-template-columns:30% 58% ;
+    gap: 12%;
+}
+
+.con__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option{
+    background: var(--colo-bg-light);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition );
+}
+
+.contact__option:hover{
+    background: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.con__icon{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact__option a{
+    margin-top: 0.8rem;
+    display: inline-block;
+    font-size: 0.7rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    resize: none;
+    color: white;
+
+}
+
+
+
+/*============== for tablet ================= */
+
+@media screen and (max-width:1024px) {
+.container.con__container{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+}
+
+/*========= for mobile phone ======== */
+
+@media screen and (max-width:600px) {
+.container.con__container{
+   width: 90%;
+}
+}
