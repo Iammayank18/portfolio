@@ -101,6 +101,7 @@ input,textarea{
     left: 18px;
     top: 22px;
     padding: 30px 35px;
+    overflow: hidden;
     }
     .close {
     width: 14%;
