@@ -29,7 +29,7 @@ input,textarea{
     top: 75px;
     width: 60%;
     /* Full width */
-    height: 80%;
+    height: 70%;
     /* Full height */
     
      backdrop-filter: blur(16px) saturate(180%);
@@ -86,7 +86,7 @@ input,textarea{
 
 .pop__container{
            width: 74%;
-    height: 90%;
+    height: 80%;
     left: 14%;
     top: 19%;
     }
@@ -97,9 +97,9 @@ input,textarea{
     }
     .pop__container{
          width: 90%;
-    height: 81%;
+        height: 67%;
     left: 18px;
-    top: 22px;
+    top: 12%;
     padding: 30px 35px;
     overflow: hidden;
     }

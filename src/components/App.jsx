@@ -11,6 +11,7 @@ import Footer from './footer/Footer';
 import Darkmode from './darkmode/Darkmode';
 import { ToastContainer } from 'react-toastify';
 import { Pop } from './popupForm/Pop';
+import Newsletter from './newsletter/Newsletter';
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
       <Footer />
       <Darkmode />
       <Pop />
+      <Newsletter />
       <ToastContainer
 position="top-right"
 autoClose={1000}
