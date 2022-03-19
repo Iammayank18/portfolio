@@ -38,14 +38,6 @@ const Cntact = () => {
   };
 
 
- 
-
-
-
-  const style = {
-  width: '2%',
-}
-
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
