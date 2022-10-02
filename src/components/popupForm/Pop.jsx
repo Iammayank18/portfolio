@@ -54,7 +54,7 @@ export const Pop = () => {
     <div id="PopUp">
       <div className="pop__container">
         <div className="pop__header">
-          <h2>Enquiry Now</h2>
+          <h2>Connect Now</h2>
           {/* <img src={close} className="close" onClick={ClosePop} alt="" /> */}
           <MdClear className="close" onClick={ClosePop} />
         </div>
