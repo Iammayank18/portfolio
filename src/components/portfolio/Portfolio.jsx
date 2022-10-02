@@ -12,8 +12,8 @@ const data = [
     id: 1,
     title: "Cryption",
     img: I1,
-    github: "#",
-    other: "#"
+    github: "",
+    other: "https://csb-p7iku.netlify.app/"
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ const Portfolio = () => {
                   rel="noreferrer"
                   className="btn btn-primary"
                 >
-                  Other
+                  Demo
                 </a>
               </div>
             </article>
