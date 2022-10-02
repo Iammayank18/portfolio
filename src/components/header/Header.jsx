@@ -3,15 +3,24 @@ import Cta from "../Cta";
 import Mak from "../../static/images/nb.png";
 import Social from "../Social";
 import "./Header.css";
-
+import Typewriter from "typewriter-effect";
 const Header = () => {
   return (
     <header>
       <div className="container header__container">
         <h5>Hello I'm</h5>
-        <h1 className="main__logo">Mayank Thakur</h1>
+        <h1 className="main__logo">
+          <Typewriter
+            options={{
+              strings: ["Mayank Thakur"],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 10
+            }}
+          />
+        </h1>
         <h5 className="text-light">
-          I'm a Full Stack Developer, and love to work on new technologies
+          I'm a Full Stack Developer, and love to work on new technologies.
         </h5>
         <Cta />
         <Social />
