@@ -5,6 +5,8 @@ import $ from "jquery";
 import Run from "../../static/images/o3.png";
 import close from "../../static/images/x.png";
 import { toast } from "react-toastify";
+import { MdClear } from "react-icons/md";
+
 export const Pop = () => {
   const notify = () =>
     toast.success("🦄 Mail Sended", {
@@ -57,7 +59,8 @@ export const Pop = () => {
         </div>
         <div className="pop__body">
           <div className="left">
-            <img src={Run} alt="" />
+            {/* <img src={Run} alt="" /> */}
+            <MdClear />
           </div>
           <div className="right">
             <form ref={form} onSubmit={sendEmail}>
