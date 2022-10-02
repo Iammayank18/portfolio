@@ -39,11 +39,11 @@ header {
 /* me */
 
 .me {
-  width: 600px;
+  width: 38%;
   /* height: 30rem; */
   position: absolute;
-  left: calc(50% - 19rem);
-  /* margin-top: 2rem; */
+  left: calc(50% - 14rem);
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,20 @@ header {
 
 @media screen and (max-width: 992px) {
   header {
-    height: 68vh;
+    height: 780px;
+  }
+  .me {
+    width: 70%;
+    margin-top: 5rem;
+    /* height: 30rem; */
+    position: absolute;
+    left: calc(50% - 11rem);
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: var(--animation-shake-y), var(--animation-fade-in),
+      var(--animation-slide-in-left);
   }
 }
 
@@ -78,7 +91,7 @@ header {
 
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 550px;
   }
 
   .header__social,
@@ -90,10 +103,11 @@ header {
   }
 
   .me {
-    width: 100%;
+    width: 70%;
+    margin-top: 1rem;
     /* height: 30rem; */
     position: absolute;
-    left: calc(50% - 13rem);
+    left: calc(50% - 7rem);
     /* margin-top: 2rem; */
     display: flex;
     justify-content: center;

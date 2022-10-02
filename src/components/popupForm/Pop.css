@@ -1,112 +1,105 @@
-
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-input,textarea{
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    resize: none;
-    color: white;
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  resize: none;
+  color: white;
+}
+#PopUp {
+  display: none;
+}
+.pop__container {
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 9999;
+  /* Sit on top */
+  left: 19%;
+  top: 75px;
+  width: 60%;
+  /* Full width */
+  /* height: 70%; */
+  /* Full height */
 
-}
-#PopUp{
-    display: none;
-}
-.pop__container{
-  
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 9999;
-    /* Sit on top */
-    left: 19%;
-    top: 75px;
-    width: 60%;
-    /* Full width */
-    height: 70%;
-    /* Full height */
-    
-     backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    /* Black w/ opacity */
-    padding: 30px 60px;
-   
-    
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  /* Black w/ opacity */
+  padding: 30px 60px;
 }
 
-.pop__body{
-    display: flex;
-    gap: 1.2rem;
-
+.pop__body {
+  display: flex;
+  gap: 1.2rem;
 }
 
-.left{
-    margin-top: 40px;
+.left {
+  margin-top: 40px;
 }
 
-.right{
-    width: 100%;
+.right {
+  width: 100%;
 }
 
-.close{
-    width: 5%;
-    padding: 10px;
-    cursor: pointer;
-    
+.close {
+  width: 5%;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.pop__header{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+.pop__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.form1{
-    height: 10px;
+.form1 {
+  height: 10px;
 }
 
-.form2{
-    height: 170px;
+.form2 {
+  height: 170px;
 }
-@media screen and (max-width:1024px) {
-    .close {
+@media screen and (max-width: 1024px) {
+  .close {
     width: 6%;
     padding: 10px;
     cursor: pointer;
-}
+  }
 
-.pop__container{
-           width: 74%;
+  .pop__container {
+    width: 74%;
     height: 80%;
     left: 14%;
     top: 19%;
-    }
+  }
 }
-@media screen and (max-width:600px) {
-    .left{
-        display: none;
-    }
-    .pop__container{
-         width: 90%;
-        height: 72%;
+@media screen and (max-width: 600px) {
+  .left {
+    display: none;
+  }
+  .pop__container {
+    width: 90%;
+    height: 72%;
     left: 18px;
     top: 9%;
     padding: 30px 35px;
     overflow: hidden;
-    }
-    .close {
+  }
+  .close {
     width: 14%;
     padding: 10px;
     cursor: pointer;
+  }
 }
-}
-

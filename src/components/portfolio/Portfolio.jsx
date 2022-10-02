@@ -20,21 +20,21 @@ const data = [
     title: "Github Repository Fetcher",
     img: I2,
     github: "#",
-    other: "#"
+    other: "https://csb-tuj38.netlify.app/"
   },
   {
     id: 3,
     title: "My portfolio",
     img: I3,
     github: "#",
-    other: "#"
+    other: "https://portfolio-chi-umber-54.vercel.app/"
   },
   {
     id: 4,
     title: "Oye Commerce",
     img: I4,
     github: "#",
-    other: "#"
+    other: "https://oyecomm.vercel.app/account"
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const data = [
     title: "Expencse Tracker",
     img: I6,
     github: "#",
-    other: "#"
+    other: "https://hackerearth-hackathon.vercel.app/"
   }
 ];
 const Portfolio = () => {
@@ -69,7 +69,12 @@ const Portfolio = () => {
                 <a href={github} className="btn">
                   Github
                 </a>
-                <a href={other} className="btn btn-primary">
+                <a
+                  href={other}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-primary"
+                >
                   Other
                 </a>
               </div>

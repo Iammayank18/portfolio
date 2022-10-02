@@ -36,14 +36,13 @@ const About = () => {
             <article className="about__card">
               <BiLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>25+ Completed Projects</small>
+              <small>20+ Completed Projects</small>
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            laboriosam facilis quo animi aut doloribus, nulla natus delectus
-            rerum necessitatibus, maiores quasi vitae. Commodi blanditiis
-            assumenda doloremque pariatur laboriosam rem.
+            I started my journey as a freelance, later learn new techs and apply
+            it by making projects. and after that, i worked with 2 startups and
+            learn so many new things here.
           </p>
           <button onClick={ShowPop} className="btn btn-primary">
             Let's Talk

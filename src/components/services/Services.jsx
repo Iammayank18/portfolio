@@ -1,9 +1,9 @@
-import React from 'react'
-import './Services.css'
-import {BsCheckLg} from 'react-icons/bs'
+import React from "react";
+import "./Services.css";
+import { BsCheckLg } from "react-icons/bs";
 const Services = () => {
   return (
-    <section id='services'>
+    <section id="services">
       <h5>What I Offer</h5>
       <h2>Services</h2>
 
@@ -106,7 +106,7 @@ const Services = () => {
         </article>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
