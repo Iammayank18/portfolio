@@ -15,7 +15,7 @@ const Header = () => {
               strings: ["Mayank Thakur"],
               autoStart: true,
               loop: true,
-              deleteSpeed: 10
+              deleteSpeed: 0.3
             }}
           />
         </h1>

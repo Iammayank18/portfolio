@@ -55,12 +55,12 @@ export const Pop = () => {
       <div className="pop__container">
         <div className="pop__header">
           <h2>Enquiry Now</h2>
-          <img src={close} className="close" onClick={ClosePop} alt="" />
+          {/* <img src={close} className="close" onClick={ClosePop} alt="" /> */}
+          <MdClear className="close" onClick={ClosePop} />
         </div>
         <div className="pop__body">
           <div className="left">
-            {/* <img src={Run} alt="" /> */}
-            <MdClear />
+            <img src={Run} alt="" />
           </div>
           <div className="right">
             <form ref={form} onSubmit={sendEmail}>
