@@ -49,7 +49,7 @@ const Exp = () => {
               <BsPatchCheckFill className="exp_details-icon" />
               <div>
                 <h4>React.js</h4>
-                <small className="text-light">1.5 yr exp</small>
+                <small className="text-light">2 yr exp</small>
               </div>
             </article>
           </div>
