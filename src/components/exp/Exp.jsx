@@ -68,7 +68,7 @@ const Exp = () => {
               <BsPatchCheckFill className="exp_details-icon" />
               <div>
                 <h4>PHP</h4>
-                <small className="text-light">1.3 yr exp</small>
+                <small className="text-light">8 months exp</small>
               </div>
             </article>
             <article className="exp_details">
@@ -82,7 +82,7 @@ const Exp = () => {
               <BsPatchCheckFill className="exp_details-icon" />
               <div>
                 <h4>SQL</h4>
-                <small className="text-light">1 yr exp</small>
+                <small className="text-light">8 months exp</small>
               </div>
             </article>
           </div>
