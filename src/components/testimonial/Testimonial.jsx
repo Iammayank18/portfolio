@@ -12,33 +12,43 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+const Avatar = () => {
+  return (
+    <FaUserNinja
+      size={30}
+      style={{
+        margin: "10px"
+      }}
+    />
+  );
+};
 
 const data = [
   {
     id: 1,
     name: "client 1",
-    img: <FaUserNinja />,
+    img: <Avatar />,
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae autem placeat fuga dolores!"
   },
   {
     id: 2,
     name: "client 1",
-    img: <FaUserNinja />,
+    img: <Avatar />,
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae autem placeat fuga dolores!"
   },
   {
     id: 3,
     name: "client 1",
-    img: <FaUserNinja />,
+    img: <Avatar />,
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae autem placeat fuga dolores!"
   },
   {
     id: 4,
     name: "client 1",
-    img: <FaUserNinja />,
+    img: <Avatar />,
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repudiandae autem placeat fuga dolores!"
   }
