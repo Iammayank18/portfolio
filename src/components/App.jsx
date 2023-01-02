@@ -14,6 +14,7 @@ import { Pop } from "./popupForm/Pop";
 import Newsletter from "./newsletter/Newsletter";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <>

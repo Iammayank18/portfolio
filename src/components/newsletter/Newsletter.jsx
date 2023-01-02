@@ -74,7 +74,7 @@ const Newsletter = () => {
         <div className="news__head">
           <h2>Newsletter</h2>
           {/* <img src={close} alt="" onClick={Closethis} className="close1" /> */}
-          <MdClear onClick={Closethis} className="close1" />
+          <MdClear onClick={Closethis} size={30} />
         </div>
         <div className="news">
           <div className="left1">
