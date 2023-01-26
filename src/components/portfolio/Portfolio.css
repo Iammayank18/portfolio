@@ -1,52 +1,47 @@
-.port__container{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2.5rem;
+/* .port__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+} */
+
+/* .port__item {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+} */
+/* .port__item:hover {
+  background: transparent;
+} */
+
+.port__item__img img {
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
-.port__item{
-    background: var(--colo-bg-light);
-    padding: 1.3rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-}
-.port__item:hover{
-    border: 1px solid var(--color-primary);
-    background: transparent;
+.port__item h3 {
+  margin: 1.2rem 0 2rem;
 }
 
-.port__item__img img{
-    border-radius: 1.5rem;
-   overflow: hidden;
+.port__cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-
-.port__item h3{
-    margin: 1.2rem 0 2rem;
-}
-
-.port__cta{
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-
 
 /*============== for tablet ================= */
 
-@media screen and (max-width:1024px) {
-.port__container{
-    grid-template-columns: repeat(2,1fr);
+/* @media screen and (max-width: 1024px) {
+  .port__container {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
-}
+  }
 }
 
-/*========= for mobile phone ======== */
-
-@media screen and (max-width:600px) {
-.port__container{
+@media screen and (max-width: 600px) {
+  .port__container {
     grid-template-columns: 1fr;
     gap: 1rem;
-}
-}
+  }
+} */

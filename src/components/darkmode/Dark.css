@@ -1,13 +1,14 @@
-.mode{
-    background-color: var(--colo-bg-light);
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 0px 20px 20px 0px;
-    border: none;
-    position: fixed;
-    top: 278px;
-    font-size: 18px;
-    cursor: pointer;
+.mode {
+  background-color: var(--colo-bg-light);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  position: fixed;
+  top: 308px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 /* .light{
