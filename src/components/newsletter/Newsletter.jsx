@@ -7,10 +7,9 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { MdClear } from "react-icons/md";
-
+import { HiOutlineNewspaper } from "react-icons/hi";
 const Newsletter = () => {
   let name1 = Cookies.get("name");
-  console.log(name1);
 
   if (name1 === "news") {
     $("#news").css("display", "none");
@@ -36,7 +35,7 @@ const Newsletter = () => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined
+      progress: undefined,
     });
 
   const form = useRef();
@@ -70,21 +69,22 @@ const Newsletter = () => {
 
   return (
     <div id="news">
-      <div className=" news__container">
+      <div className=" news__container dark:bg-slate-800 bg-slate-200 rounded-lg">
         <div className="news__head">
-          <h2>Newsletter</h2>
+          <h2 className="text-xl dark:text-white">Newsletter</h2>
           {/* <img src={close} alt="" onClick={Closethis} className="close1" /> */}
-          <MdClear onClick={Closethis} size={30} />
+          <MdClear onClick={Closethis} size={30} className="dark:text-white" />
         </div>
         <div className="news">
-          <div className="left1">
-            <img src={NewsGif} alt="" />
+          <div className="">
+            {/* <img src={NewsGif} alt="" /> */}
+            <HiOutlineNewspaper size={100} className="dark:text-indigo-600" />
           </div>
           <div className="right1">
             <form ref={form} onSubmit={sendEmail}>
               <input
                 type="text"
-                className="fname"
+                className="p-2 dark:text-white"
                 name="email"
                 placeholder="Email"
                 required

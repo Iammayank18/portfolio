@@ -66,19 +66,6 @@ let arr2 = [
   },
 ];
 
-var myArray = [
-  "red",
-  "yellow",
-  "pink",
-  "green",
-  "sky",
-  "red",
-  "green",
-  "lime",
-  "amber",
-  "orange",
-];
-let randColor = myArray[Math.floor(Math.random() * myArray.length)];
 const Exp = () => {
   return (
     <section id="" className="h-screen">
@@ -89,7 +76,6 @@ const Exp = () => {
 
       <div>
         {arr2.map((item, i) => {
-          console.log(item);
           return (
             <div
               key={i}
@@ -145,11 +131,10 @@ const Exp = () => {
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {item.tech.map((data, i) => {
-                    console.log(randColor);
                     return (
                       <span
                         key={i}
-                        className={`bg-${randColor}-200 text-sky-600	p-2 px-5 border-1 rounded-3xl`}
+                        className={`dark:bg-cyan-200 dark:text-sky-700 bg-red-200 text-red-800	p-2 px-5 border-1 rounded-3xl`}
                       >
                         {data}
                       </span>
