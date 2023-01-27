@@ -17,7 +17,28 @@ let arr2 = [
       "Designed reusable and reliable components that decreased unwanted lines of code.",
       "Developed clear specifications for project plans using customer requirements , collaborate with designing team for layout specifications.",
     ],
-    tech: ["React.js", "React Native", "Javscript", "Html", "Tailwind css"],
+    tech: [
+      {
+        title: "React.js",
+        color: "cyan",
+      },
+      {
+        title: "React Native",
+        color: "red",
+      },
+      {
+        title: "Javscript",
+        color: "green",
+      },
+      {
+        title: "Html",
+        color: "yellow",
+      },
+      {
+        title: "Tailwind css",
+        color: "sky",
+      },
+    ],
   },
   {
     company: "Meon AI",
@@ -34,7 +55,33 @@ let arr2 = [
       "Integrating with back-end services and APIs to display and manipulate data",
       "Optimizing the performance and load times of web pages , Ensuring cross-browser compatibility and accessibility.",
     ],
-    tech: ["React.js", "jQuery", "Javscript", "Html", "Css", "Bootstrap"],
+    tech: [
+      {
+        title: "React.js",
+        color: "cyan",
+      },
+
+      {
+        title: "Javscript",
+        color: "green",
+      },
+      {
+        title: "Bootstrap",
+        color: "red",
+      },
+      {
+        title: "Html",
+        color: "yellow",
+      },
+      {
+        title: "Tailwind css",
+        color: "sky",
+      },
+      {
+        title: "jQuery",
+        color: "red",
+      },
+    ],
   },
   {
     company: "Exponus Media",
@@ -53,15 +100,34 @@ let arr2 = [
       "Optimizing the performance and scalability of web applications.",
     ],
     tech: [
-      "React.js",
-      "Node.js",
-      "Php",
-      "Bootstrap",
-      "Sql",
-      "MongoDB",
-      "jQuery",
-      "Javscript",
-      "Html",
+      {
+        title: "React.js",
+        color: "cyan",
+      },
+      {
+        title: "Node.js",
+        color: "red",
+      },
+      {
+        title: "Javscript",
+        color: "green",
+      },
+      {
+        title: "Html",
+        color: "yellow",
+      },
+      {
+        title: "Php",
+        color: "red",
+      },
+      {
+        title: "Sql",
+        color: "yellow",
+      },
+      {
+        title: "MongoDB",
+        color: "green",
+      },
     ],
   },
 ];
@@ -134,9 +200,9 @@ const Exp = () => {
                     return (
                       <span
                         key={i}
-                        className={`dark:bg-cyan-200 dark:text-sky-700 bg-red-200 text-red-800	p-2 px-5 border-1 rounded-3xl`}
+                        className={`dark:bg-${data.color}-200 dark:text-${data.color}-700 bg-${data.color}-200 text-${data.color}-800	p-2 px-5 border-1 rounded-3xl`}
                       >
-                        {data}
+                        {data.title}
                       </span>
                     );
                   })}
