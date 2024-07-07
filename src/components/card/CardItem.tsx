@@ -34,30 +34,29 @@ export default function CardItem({ className, item, ...props }: CardProps) {
         <Image src={item.icon} alt={item.title} />
         <CardTitle>{item.title}</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <CardContent className="grid gap-4 transition ease-out ">
         <div>
           {(showFull ? item.skills : item.skills.slice(0, 3)).map((item, i) => (
             <div
               key={i}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+              className="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
             >
               <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
               <div className="space-y-1">
                 <p className="text-sm font-medium leading-none">{item.title}</p>
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
               </div>
             </div>
           ))}
 
           <div>
-            <CoreButton
-              title={showFull ? "View less" : "View more"}
+            <p
+              className="cursor-pointer hover:text-sky-400"
               onClick={() => {
                 setShowFull(!showFull);
               }}
-            />
+            >
+              {showFull ? "View less" : "View more"}
+            </p>
           </div>
         </div>
       </CardContent>

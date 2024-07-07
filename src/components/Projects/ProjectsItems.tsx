@@ -1,19 +1,57 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import React from "react";
+import React, { FC } from "react";
 import { PinContainer } from "../ui/HDpin";
-
-const ProjectsItems = () => {
+import { GitHubLogoIcon, Link1Icon } from "@radix-ui/react-icons";
+import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+type Porps = {
+  item: {
+    name: string;
+    description: string;
+    github: string;
+    live: string;
+    inProgress: boolean;
+    icon: StaticImageData;
+  };
+};
+const ProjectsItems: FC<Porps> = ({ item }) => {
   return (
-    <PinContainer title="My Project" href="#">
+    <PinContainer title={item.name} href={item.live}>
       <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-        <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-          Project
-        </h3>
-        <div className="text-base !m-0 !p-0 font-normal">
-          <span className="text-slate-500 ">Blaaah Blaaah</span>
+        <div className="flex items-center pb-2">
+          <h3 className="max-w-xs font-bold  text-xl text-slate-100">
+            {item.name}
+          </h3>
+          {item.inProgress && (
+            <span className="bg-blue-100 text-slate-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-[#FFD49C] dark:text-slate-800 ms-3">
+              inprogress
+            </span>
+          )}
         </div>
-        <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+        <div className="my-2 flex items-center space-x-4">
+          <Link href={item.github} target="_blank">
+            <GitHubLogoIcon color="white" width={20} height={20} />
+          </Link>
+
+          <Link href={item.live} target="_blank">
+            <Link1Icon color="white" width={28} height={28} />
+          </Link>
+        </div>
+        <div className="text-base !m-0 !p-0 font-normal">
+          <span className="text-slate-500 ">{item.description}</span>
+        </div>
+        <div className="flex flex-1 justify-center items-center">
+          <Image
+            src={item.icon}
+            alt={item.name}
+            width={200}
+            height={200}
+            className=" z-50"
+            priority
+          />
+        </div>
+        {/* <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" /> */}
       </div>
     </PinContainer>
   );

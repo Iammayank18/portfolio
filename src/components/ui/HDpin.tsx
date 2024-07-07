@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
 
 export const PinContainer = ({
@@ -36,8 +35,8 @@ export const PinContainer = ({
         "relative group/pin z-50  cursor-pointer",
         containerClassName
       )}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
       onClick={() => router.replace(href || "/", {})}
     >
       <div
@@ -71,7 +70,7 @@ export const PinPerspective = ({
   return (
     <motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
-        <div className="absolute top-0 inset-x-0  flex justify-center">
+        {/* <div className="absolute top-0 inset-x-0  flex justify-center">
           <a
             href={href}
             target={"_blank"}
@@ -83,9 +82,9 @@ export const PinPerspective = ({
 
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
           </a>
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           style={{
             perspective: "1000px",
             transform: "rotateX(70deg) translateZ(0)",
@@ -161,7 +160,7 @@ export const PinPerspective = ({
           <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-cyan-500 translate-y-[14px] w-px h-20 group-hover/pin:h-40  " />
           <motion.div className="absolute right-1/2 translate-x-[1.5px] bottom-1/2 bg-cyan-600 translate-y-[14px] w-[4px] h-[4px] rounded-full z-40 blur-[3px]" />
           <motion.div className="absolute right-1/2 translate-x-[0.5px] bottom-1/2 bg-cyan-300 translate-y-[14px] w-[2px] h-[2px] rounded-full z-40 " />
-        </>
+        </> */}
       </div>
     </motion.div>
   );

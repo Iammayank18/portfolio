@@ -4,6 +4,7 @@ import {
   LinkedInLogoIcon,
   GitHubLogoIcon,
   TwitterLogoIcon,
+  EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
 const Footer = () => {
   return (
@@ -22,6 +23,11 @@ const Footer = () => {
         icons={<TwitterLogoIcon />}
         title="Twitter"
         link="https://x.com/Mayankt34461244"
+      />
+      <CoreSocialButtons
+        icons={<EnvelopeClosedIcon />}
+        title="Email"
+        link="mailto:mayank.sanynk@gmail.com"
       />
     </footer>
   );
