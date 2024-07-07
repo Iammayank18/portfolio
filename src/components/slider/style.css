@@ -1,0 +1,46 @@
+.window-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+  gap: 30px;
+}
+
+.slide {
+  /* flex: 0 0 calc(100% / 3);  */
+  /* height: 200px; Adjust slide height as needed */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.prevBtn {
+  left: 10px;
+}
+
+.nextBtn {
+  right: 10px;
+}

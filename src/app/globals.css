@@ -82,3 +82,7 @@ body {
   scroll-behavior: smooth;
   display: none;
 }
+
+.html-svg {
+  fill: white;
+}
