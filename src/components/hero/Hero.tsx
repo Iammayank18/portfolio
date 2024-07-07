@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <BackgroundBeams />
+      <BackgroundBeams className="sm:hidden" />
     </section>
   );
 };

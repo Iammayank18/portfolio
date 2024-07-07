@@ -61,7 +61,7 @@ const projects = [
 
 const ProjectsContainer = () => {
   return (
-    <div className="flex flex-wrap items-center gap-8 space-y-8">
+    <div className="flex flex-wrap gap-4 w-full items-center">
       {projects.map((item) => (
         <ProjectsItems key={item.name} item={item} />
       ))}

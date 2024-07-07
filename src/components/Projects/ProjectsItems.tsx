@@ -5,6 +5,7 @@ import { PinContainer } from "../ui/HDpin";
 import { GitHubLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 type Porps = {
   item: {
     name: string;
@@ -17,9 +18,13 @@ type Porps = {
 };
 const ProjectsItems: FC<Porps> = ({ item }) => {
   return (
-    <PinContainer title={item.name} href={item.live}>
-      <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-        <div className="flex items-center pb-2">
+    <Card
+      className={
+        "w-full md:w-[300px] h-[400px] overflow-hidden hover:border-2 hover:border-slate-500 transition duration-700"
+      }
+    >
+      <CardHeader>
+        <div className="flex items-center">
           <h3 className="max-w-xs font-bold  text-xl text-slate-100">
             {item.name}
           </h3>
@@ -29,7 +34,9 @@ const ProjectsItems: FC<Porps> = ({ item }) => {
             </span>
           )}
         </div>
-        <div className="my-2 flex items-center space-x-4">
+      </CardHeader>
+      <CardContent>
+        <div className="mb-2 flex items-center space-x-4">
           <Link href={item.github} target="_blank">
             <GitHubLogoIcon color="white" width={20} height={20} />
           </Link>
@@ -51,9 +58,8 @@ const ProjectsItems: FC<Porps> = ({ item }) => {
             priority
           />
         </div>
-        {/* <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" /> */}
-      </div>
-    </PinContainer>
+      </CardContent>
+    </Card>
   );
 
   //   <div className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-md group bg-gradient-to-br from-[#7A87FB] to-[#FFD49C] group-hover:from-[#7A87FB] group-hover:to-[#FFD49C] hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 hover:animate-pulse max-w-sm ">

@@ -1,17 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import React from "react";
-import CoreButton from "../CoreButton";
 
 type CardProps = {
   className?: React.ComponentProps<typeof Card>;
@@ -29,12 +21,18 @@ type CardProps = {
 export default function CardItem({ className, item, ...props }: CardProps) {
   const [showFull, setShowFull] = React.useState(false);
   return (
-    <Card className={cn("w-full md:w-[300px]", className)} {...props}>
+    <Card
+      className={cn(
+        "w-full md:w-[300px] hover:border-2 hover:border-slate-500 transition duration-700",
+        className
+      )}
+      {...props}
+    >
       <CardHeader>
         <Image src={item.icon} alt={item.title} />
         <CardTitle>{item.title}</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-4 transition ease-out ">
+      <CardContent className="grid gap-4 transition ease-out">
         <div>
           {(showFull ? item.skills : item.skills.slice(0, 3)).map((item, i) => (
             <div

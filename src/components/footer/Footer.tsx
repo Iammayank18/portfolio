@@ -8,7 +8,7 @@ import {
 } from "@radix-ui/react-icons";
 const Footer = () => {
   return (
-    <footer className="w-screen space-x-4 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 flex justify-center items-center">
+    <footer className="w-screen py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 flex justify-center items-center flex-wrap gap-4">
       <CoreSocialButtons
         icons={<LinkedInLogoIcon />}
         title="Linkedin"
