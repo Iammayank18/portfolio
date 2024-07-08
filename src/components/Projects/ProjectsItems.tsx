@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { FC } from "react";
-import { PinContainer } from "../ui/HDpin";
 import { GitHubLogoIcon, Link1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
