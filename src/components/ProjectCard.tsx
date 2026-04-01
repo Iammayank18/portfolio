@@ -18,18 +18,19 @@ export const ProjectCard = ({
 
   return (
     <motion.div
-      layoutId={`project-${project.id}`}
-      className="relative bg-white p-8 sketch-border shadow-sm hover:shadow-2xl transition-all cursor-pointer group project-card overflow-visible"
+      className="relative bg-white p-8 sketch-border shadow-sm hover:shadow-2xl transition-all cursor-pointer group project-card overflow-visible w-full"
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      initial={{ rotate: index % 2 === 0 ? 1 : -1 }}
+      animate={{ rotate: index % 2 === 0 ? 1 : -1 }}
       whileHover={{ y: -10, rotate: index % 2 === 0 ? 2 : -2 }}
     >
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[repeating-linear-gradient(transparent,transparent_23px,#000_23px,#000_24px)]" />
 
-      <Tape className="-top-3 -left-4 rotate-[-35deg]" />
-      <Tape className="-bottom-3 -right-4 rotate-[25deg] bg-blue-200/30" />
-      <Tape className="-top-2 right-1/4 rotate-[5deg] w-12 h-5 opacity-40" />
+      <Tape className="-top-3 -left-2 -rotate-12 w-12" />
+      <Tape className="-bottom-3 -right-2 rotate-12 bg-blue-200/30 w-12" />
+      <Tape className="-top-1 right-1/4 rotate-[5deg] w-10 h-4 opacity-40" />
 
       <AnimatePresence>
         {isHovered && project.notes && (

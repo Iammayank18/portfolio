@@ -17,7 +17,7 @@ export const ProjectsSection = ({
         <h2 className="text-6xl font-sketch mb-16 text-center">
           Notebook of Builds
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12 lg:gap-16 items-start">
           {PROJECTS.map((project, i) => (
             <ProjectCard
               key={project.id}
