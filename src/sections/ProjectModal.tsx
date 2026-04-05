@@ -25,7 +25,7 @@ export const ProjectModal = ({
           animate={{ rotateX: 0, opacity: 1, scale: 1 }}
           exit={{ rotateX: 90, opacity: 0, scale: 0.9 }}
           transition={{ type: "spring", damping: 20, stiffness: 100 }}
-          className="bg-white w-full max-w-3xl sketch-border p-8 md:p-12 relative overflow-y-auto max-h-[90vh] origin-top"
+          className="bg-white w-full max-w-3xl sketch-border p-4 sm:p-8 md:p-12 relative overflow-y-auto max-h-[90vh] origin-top"
           style={{ perspective: 1000 }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -56,7 +56,7 @@ export const ProjectModal = ({
             <span className="font-mono text-sm text-blue-500 uppercase tracking-widest">
               {selectedProject.category}
             </span>
-            <h2 className="text-5xl font-sketch mt-2">
+            <h2 className="text-3xl md:text-5xl font-sketch mt-2">
               {selectedProject.title}
             </h2>
           </div>

@@ -80,6 +80,7 @@ export const PROJECTS: Project[] = [
     solution:
       "Designed prompt orchestration and response parsing logic using Electron.js and LLM APIs (OpenAI, Anthropic).",
     tech: ["Electron.js", "JavaScript", "LLM APIs", "GROQ"],
+    link: "https://github.com/iammayank18/echo",
     category: "Tool",
     notes: [
       "MacOS Native experience",
@@ -96,6 +97,7 @@ export const PROJECTS: Project[] = [
     solution:
       "Built a Chrome V3 extension with smart URL auto-tracking and an interactive analytics dashboard.",
     tech: ["Vanilla JS", "CSS", "Chrome API", "Heatmaps"],
+    link: "https://focusloop-app.vercel.app/",
     category: "SaaS",
     notes: [
       "Heatmap activity tracking",
@@ -134,14 +136,29 @@ export const EXPERIENCE: Experience[] = [
     role: "Frontend Engineer",
     period: "Feb 2024 – Mar 2026",
     description:
-      "Owned and architected privacy-first systems Handling 1,000+ concurrent users with high stability and performance.",
-    tech: ["React.js", "Jest", "Playwright", "Code Splitting", "Next.js"],
+      "Collaborated with frontend, backend, and design teams to ship privacy-first systems for 1,000+ concurrent users across fintech and B2B workflows.",
+    tech: ["React.js", "TypeScript", "Jest", "Playwright", "Next.js"],
     achievements: [
-      "Led digital signature platform for 1,000+ brokers",
-      "Improved frontend performance by up to 40–50%",
-      "Achieved 90% test coverage on critical flows",
+      "Built & shipped privacy-first temporary calling system with cross-functional team",
+      "Delivered React.js UI for digital signature platform serving 1,000+ brokers",
+      "Improved performance 40–50% via rendering optimizations and code splitting",
+      "Wrote 70% of all tests — achieved 90% coverage and cut review cycles by 60%",
     ],
     marginNote: "Privacy-first architect 🔐",
+  },
+  {
+    company: "Self-Directed",
+    role: "Freelance Frontend Developer",
+    period: "Apr 2023 – Jan 2024",
+    description:
+      "Delivered freelance React and TypeScript projects while deepening expertise in modern state management, SSR, and testing best practices.",
+    tech: ["React", "TypeScript", "Next.js", "Zustand", "React Query", "Jest"],
+    achievements: [
+      "Delivered end-to-end React & TypeScript projects for small businesses",
+      "Deepened expertise in Zustand, React Query, and Next.js App Router",
+      "Strengthened testing practices with Jest and React Testing Library",
+    ],
+    marginNote: "Always learning 📚",
   },
   {
     company: "Mindnerves Technologies",
@@ -151,9 +168,9 @@ export const EXPERIENCE: Experience[] = [
       "Built high-performance real-time applications using WebSocket protocols and efficient database indexing.",
     tech: ["React", "TypeScript", "WebSocket", "PostgreSQL", "Node.js"],
     achievements: [
-      "Built real-time job tracking for 5,000+ users",
-      "Developed analytics dashboard with millisecond precision",
-      "Improved API performance by 30% through query optimization",
+      "Shipped real-time job tracking app for 5,000+ active users",
+      "Built analytics dashboard tracking behavior across 10+ platforms with millisecond precision",
+      "Improved API response times by 30% through query optimization and indexing",
     ],
     marginNote: "Real-time specialist ⚡",
   },
@@ -165,9 +182,9 @@ export const EXPERIENCE: Experience[] = [
       "Designed and delivered digital fintech platforms with a focus on identity verification and user trust.",
     tech: ["React", "Security", "Optimization", "eKYC"],
     achievements: [
-      "10,000+ identity verifications per month",
-      "Built fully digital E-IPO system",
-      "Reduced bundle size by 35% via code splitting",
+      "10,000+ identity verifications per month on eKYC platform",
+      "Built fully digital E-IPO system reducing processing time from days to hours",
+      "Reduced bundle size by 35% — improved Lighthouse score from ~55 to 80+",
     ],
     marginNote: "Fintech focused 🏦",
   },
@@ -179,9 +196,9 @@ export const EXPERIENCE: Experience[] = [
       "Delivered 15+ web and mobile projects with high client satisfaction and effective sprint planning.",
     tech: ["HTML/CSS", "JavaScript", "React", "WordPress", "AWS"],
     achievements: [
-      "Delivered 15+ high-quality client projects",
-      "Reduced deployment time by 40% via CI/CD",
-      "Consistently 20% ahead of schedule",
+      "Delivered 15+ client projects with 95% satisfaction rate",
+      "Reduced deployment time by 40% via CI/CD with GitHub Actions",
+      "Consistently completed projects 20% ahead of schedule",
     ],
     marginNote: "Speed-to-market pro 🚀",
   },
@@ -191,11 +208,10 @@ export const EXPERIENCE: Experience[] = [
     period: "Jan 2020 – Dec 2020",
     description:
       "Managed the full development lifecycle for CMS and CRM systems for international clients.",
-    tech: ["Full Stack", "CMS", "CRM", "Freelance"],
+    tech: ["Full Stack", "CMS", "CRM", "Node.js"],
     achievements: [
-      "100% on-time completion rate",
-      "Achieved ~70% lead conversion rate",
-      "Architected scalable international solutions",
+      "100% on-time project delivery rate across all engagements",
+      "Architected scalable CMS & CRM systems for international clients",
     ],
     marginNote: "Entrepreneurial spirit 🌱",
   },
@@ -218,8 +234,8 @@ export const SKILLS_ROADMAP = [
         details: "Problem solving and core fundamentals.",
       },
       {
-        name: "Full Stack (PHP/Node)",
-        level: 80,
+        name: "Full Stack (Node)",
+        level: 85,
         details: "Built complete CMS & CRM systems.",
       },
     ],
@@ -237,7 +253,7 @@ export const SKILLS_ROADMAP = [
       },
       {
         name: "CI/CD & AWS",
-        level: 85,
+        level: 70,
         details: "Automating deployments and cloud infrastructure.",
       },
       {
@@ -255,7 +271,7 @@ export const SKILLS_ROADMAP = [
     skills: [
       {
         name: "TypeScript",
-        level: 90,
+        level: 65,
         details: "Strictly typed large-scale applications.",
       },
       {
@@ -278,12 +294,12 @@ export const SKILLS_ROADMAP = [
     skills: [
       {
         name: "LLM Integration",
-        level: 85,
+        level: 50,
         details: "Leveraging OpenAI/Anthropic APIs for smart features.",
       },
       {
         name: "Testing (Playwright)",
-        level: 90,
+        level: 95,
         details: "90%+ test coverage on complex flows.",
       },
       {
@@ -317,44 +333,56 @@ export const SKILLS_ROADMAP = [
 export const ABOUT_SKILLS = [
   {
     name: "React & Next.js",
-    level: 98,
+    level: 90,
     details:
       "Expert in building scalable web apps with React.js, Next.js (App Router), and Redux/Zustand.",
   },
   {
+    name: "JavaScript",
+    level: 95,
+    details:
+      "Strong core fundamentals, modern ES6+ patterns, and problem-solving across frontend and backend.",
+  },
+  {
     name: "React Native",
-    level: 92,
+    level: 85,
     details:
       "Developing high-performance cross-platform mobile applications with native bridges.",
   },
   {
     name: "TypeScript",
-    level: 95,
+    level: 65,
     details:
       "Architecting type-safe codebases for better maintainability and developer experience.",
   },
   {
-    name: "LLM Integration",
-    level: 90,
-    details:
-      "Integrating AI-powered features using OpenAI and Anthropic APIs into production.",
-  },
-  {
     name: "Node.js",
-    level: 88,
+    level: 85,
     details:
       "Building scalable backend services, RESTful APIs, and real-time WebSocket layers.",
   },
   {
+    name: "MongoDB",
+    level: 75,
+    details:
+      "Designing document-based schemas and querying efficiently for production applications.",
+  },
+  {
     name: "Tailwind CSS",
-    level: 96,
+    level: 95,
     details:
       "Rapidly delivering modern, responsive, and performance-optimized user interfaces.",
   },
   {
     name: "Testing (Playwright)",
-    level: 94,
+    level: 95,
     details:
       "Ensuring 90%+ quality standards with automated E2E and unit testing suites.",
+  },
+  {
+    name: "LLM Integration",
+    level: 40,
+    details:
+      "Integrating AI-powered features using OpenAI and Anthropic APIs into production.",
   },
 ];

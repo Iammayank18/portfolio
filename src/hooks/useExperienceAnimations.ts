@@ -34,14 +34,14 @@ export function useExperienceAnimations(isBooting: boolean) {
           scrollTrigger: {
             trigger: item,
             start: "top 85%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
 
         if (dot) {
           tl.from(dot, {
             scale: 0,
-            duration: 0.4,
+            duration: 0.3,
             ease: "back.out(2)",
           });
         }
@@ -51,10 +51,10 @@ export function useExperienceAnimations(isBooting: boolean) {
             period,
             {
               x: -20,
-              duration: 0.6,
+              duration: 0.4,
               ease: "power2.out",
             },
-            "-=0.2",
+            "-=0.1",
           );
         }
 
@@ -62,13 +62,11 @@ export function useExperienceAnimations(isBooting: boolean) {
           tl.from(
             card,
             {
-              y: 40,
-              rotate: -2,
-              clipPath: "inset(0 0 100% 0)",
-              duration: 1,
-              ease: "elastic.out(1, 0.8)",
+              y: 30,
+              duration: 0.5,
+              ease: "power3.out",
             },
-            "-=0.4",
+            "-=0.2",
           );
         }
 
@@ -76,12 +74,12 @@ export function useExperienceAnimations(isBooting: boolean) {
           tl.from(
             content,
             {
-              y: 10,
-              stagger: 0.05,
-              duration: 0.4,
+              y: 8,
+              stagger: 0.04,
+              duration: 0.3,
               ease: "power2.out",
             },
-            "-=0.6",
+            "-=0.3",
           );
         }
 

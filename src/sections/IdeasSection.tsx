@@ -5,11 +5,11 @@ import { IDEAS } from "../data";
 export const IdeasSection = () => (
   <section
     id="ideas"
-    className="py-32 px-6 overflow-hidden bg-gray-50/30"
+    className="py-16 md:py-32 px-6 overflow-hidden bg-gray-50/30"
   >
     <div className="max-w-6xl mx-auto">
-      <div className="text-center mb-20 relative">
-        <h2 className="text-6xl font-sketch inline-block relative">
+      <div className="text-center mb-10 md:mb-20 relative">
+        <h2 className="text-3xl md:text-6xl font-sketch inline-block relative">
           Wall of Ideas
           <motion.div
             initial={{ width: 0 }}

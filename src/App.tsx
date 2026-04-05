@@ -12,12 +12,13 @@ import { LabSection } from "./sections/LabSection";
 import { IdeasSection } from "./sections/IdeasSection";
 import { TerminalSectionWrapper } from "./sections/TerminalSectionWrapper";
 import { ContactSection } from "./sections/ContactSection";
+import { EducationSection } from "./sections/EducationSection";
 import { Footer } from "./sections/Footer";
 import { ProjectModal } from "./sections/ProjectModal";
 import type { Project } from "./data";
 
 export default function App() {
-  const [isBooting, setIsBooting] = useState(false);
+  const [isBooting, setIsBooting] = useState(true);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const { scrollYProgress: pageScrollProgress } = useScroll();
@@ -32,7 +33,7 @@ export default function App() {
       <AnimatePresence mode="wait">
         {isBooting ? (
           <>
-            {/* <SketchIntro key="intro" onComplete={() => setIsBooting(false)} /> */}
+            <SketchIntro key="intro" onComplete={() => setIsBooting(false)} />
           </>
         ) : (
           <motion.div
@@ -46,6 +47,7 @@ export default function App() {
             <HeroSection isBooting={isBooting} />
             <AboutSection isBooting={isBooting} />
             <ExperienceSection isBooting={isBooting} />
+            <EducationSection />
             <RoadmapSection isBooting={isBooting} />
             <ProjectsSection
               onSelect={setSelectedProject}

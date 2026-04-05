@@ -22,7 +22,7 @@ export const RoadmapSection = ({ isBooting }: { isBooting: boolean }) => {
         <div className="max-w-6xl mx-auto w-full mb-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <h2 className="text-6xl font-sketch">The Roadmap</h2>
+              <h2 className="text-3xl md:text-6xl font-sketch">The Roadmap</h2>
               <p className="font-sketch text-xl text-gray-500 mt-2 flex items-center gap-2">
                 Scroll down to travel through the timeline
                 <motion.span
@@ -51,12 +51,12 @@ export const RoadmapSection = ({ isBooting }: { isBooting: boolean }) => {
 
           <div
             ref={horizontalRef}
-            className="flex flex-nowrap gap-8 cursor-grab active:cursor-grabbing px-12 will-change-transform"
+            className="flex flex-nowrap gap-8 cursor-grab active:cursor-grabbing px-4 md:px-12 will-change-transform"
           >
             {SKILLS_ROADMAP.map((item, index) => (
               <div
                 key={item.year}
-                className="roadmap-item min-w-[320px] md:min-w-[450px] flex-shrink-0 relative"
+                className="roadmap-item min-w-[260px] sm:min-w-[320px] md:min-w-[450px] shrink-0 relative"
               >
                 {/* Timeline Node (Desktop) */}
                 <div className="hidden md:flex absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 w-8 h-8 bg-white sketch-border z-10 items-center justify-center">
@@ -65,7 +65,7 @@ export const RoadmapSection = ({ isBooting }: { isBooting: boolean }) => {
                   />
                 </div>
 
-                <div className="p-8 sketch-border bg-white shadow-sm hover:shadow-xl transition-all h-full flex flex-col relative group">
+                <div className="p-4 md:p-8 sketch-border bg-white shadow-sm hover:shadow-xl transition-all h-full flex flex-col relative group">
                   <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="flex gap-1">
                       <div className="w-1 h-1 bg-gray-300 rounded-full" />
@@ -115,7 +115,7 @@ export const RoadmapSection = ({ isBooting }: { isBooting: boolean }) => {
             ))}
 
             {/* Future Placeholder */}
-            <div className="min-w-[400px] flex-shrink-0 flex items-center justify-center opacity-30">
+            <div className="min-w-[260px] md:min-w-[400px] shrink-0 flex items-center justify-center opacity-30">
               <div className="text-center">
                 <p className="font-sketch text-2xl">To be continued...</p>
                 <p className="font-sketch text-gray-500">

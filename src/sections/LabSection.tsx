@@ -8,10 +8,10 @@ export const LabSection = ({ isBooting }: { isBooting: boolean }) => {
   useLabAnimations(isBooting);
 
   return (
-    <section id="lab" className="py-32 px-6 overflow-hidden">
+    <section id="lab" className="py-16 md:py-32 px-6 overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-5xl font-sketch">The Lab</h2>
+        <div className="flex items-center gap-4 mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-sketch">The Lab</h2>
           <Star className="text-yellow-500 animate-pulse" />
         </div>
         <div className="grid md:grid-cols-2 gap-8">

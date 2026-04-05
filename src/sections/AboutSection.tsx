@@ -9,13 +9,13 @@ export const AboutSection = ({ isBooting }: { isBooting: boolean }) => {
   return (
     <section
       id="about"
-      className="py-32 px-6 max-w-6xl mx-auto about-section relative"
+      className="py-16 md:py-32 px-6 max-w-6xl mx-auto about-section relative"
     >
-      <div className="grid md:grid-cols-12 gap-12 items-start">
+      <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
         {/* Left Column: The Narrative */}
         <div className="md:col-span-7 about-content">
           <div className="relative inline-block mb-8">
-            <h2 className="text-6xl font-sketch">The Story</h2>
+            <h2 className="text-3xl md:text-6xl font-sketch">The Story</h2>
           </div>
 
           <div className="space-y-6 font-sketch text-xl leading-relaxed text-gray-700">
@@ -85,15 +85,15 @@ export const AboutSection = ({ isBooting }: { isBooting: boolean }) => {
               <ul className="font-sketch text-lg space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-black rounded-full" />
-                  Obsessed with typography
+                  Pixel-perfect from Figma, every time
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-black rounded-full" />
-                  Loves React Native internals
+                  Deep in React internals (yes, the fiber stuff)
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-black rounded-full" />
-                  Can spend hours on animations
+                  MongoDB collections feel like home
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-black rounded-full" />
