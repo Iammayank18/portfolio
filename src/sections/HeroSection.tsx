@@ -3,7 +3,7 @@ import { ChevronDown, Download, ArrowRight } from "lucide-react";
 import { useHeroAnimations } from "../hooks/useHeroAnimations";
 
 const STATS = [
-  { value: "4+", label: "Years" },
+  { value: "4.5+", label: "Years" },
   { value: "5,000+", label: "Users" },
   { value: "3", label: "Products" },
 ];
