@@ -4,8 +4,8 @@ import { useHeroAnimations } from "../hooks/useHeroAnimations";
 
 const STATS = [
   { value: "4.5+", label: "Years" },
-  { value: "5,000+", label: "Users" },
-  { value: "3", label: "Products" },
+  { value: "30,000+", label: "Users" },
+  { value: "4", label: "Products" },
 ];
 
 export const HeroSection = ({ isBooting }: { isBooting: boolean }) => {

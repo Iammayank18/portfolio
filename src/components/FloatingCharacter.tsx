@@ -4,7 +4,7 @@ import { Coffee, Laptop, Map, Beaker, Lightbulb, Star } from "lucide-react";
 
 export const FloatingCharacter = () => {
   const [section, setSection] = useState<
-    "hero" | "about" | "projects" | "roadmap" | "lab" | "ideas"
+    "hero" | "about" | "experience" | "projects" | "roadmap" | "lab" | "ideas"
   >("hero");
   const { scrollY } = useScroll();
 

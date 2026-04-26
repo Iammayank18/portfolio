@@ -72,105 +72,122 @@ export const IDEAS: Idea[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: "wayverb",
+    title: "Wayverb",
+    description: "School Management SaaS — live with paying customers.",
+    problem:
+      "Indian schools needed a unified platform for fee collection, attendance, exams, and parent-teacher communication.",
+    solution:
+      "Built solo on MERN + Firebase from idea to paying product in 4 months, with companion React Native apps for teachers and parents.",
+    tech: ["React Native", "React.js", "Node.js", "MongoDB", "Firebase"],
+    link: "https://wayverb.com",
+    category: "SaaS",
+    notes: [
+      "2 schools live & generating revenue",
+      "Teacher + parent mobile apps",
+      "0→1 in 4 months",
+    ],
+  },
+  {
     id: "echo-ai",
     title: "Echo – AI Voice",
     description: "AI Voice-to-Intelligence App for macOS.",
     problem:
-      "Converting speech input into structured text and images while maintaining context-aware actionable outputs.",
+      "Converting speech input into structured, context-aware outputs from audio.",
     solution:
-      "Designed prompt orchestration and response parsing logic using Electron.js and LLM APIs (OpenAI, Anthropic).",
-    tech: ["Electron.js", "JavaScript", "LLM APIs", "GROQ"],
+      "Orchestrates across OpenAI, Anthropic, and GROQ APIs with secure key management inside a clean Electron.js shell.",
+    tech: ["Electron.js", "JavaScript", "OpenAI", "Anthropic", "GROQ"],
     link: "https://github.com/iammayank18/echo",
     category: "Tool",
     notes: [
-      "MacOS Native experience",
-      "ML/NLP integration",
-      "Prompt Engineering focus",
+      "macOS native experience",
+      "Multi-LLM orchestration",
+      "Secure key management",
     ],
   },
   {
     id: "focusloop",
     title: "FocusLoop",
-    description: "Chrome Extension (Pomodoro Timer & Work Tracker).",
+    description: "Published Chrome Extension — Pomodoro timer & work tracker.",
     problem:
-      "Maintaining deep focus and automatically classifying digital work sessions for insights.",
+      "Most focus tools require manual logging; real patterns stay hidden.",
     solution:
-      "Built a Chrome V3 extension with smart URL auto-tracking and an interactive analytics dashboard.",
-    tech: ["Vanilla JS", "CSS", "Chrome API", "Heatmaps"],
-    link: "https://focusloop-app.vercel.app/",
-    category: "SaaS",
+      "Automatic URL-based activity logging, Pomodoro timers, and a GitHub-style heatmap dashboard. Zero dependencies, pure JS.",
+    tech: ["Vanilla JS", "CSS3", "Chrome API V3"],
+    link: "https://github.com/iammayank18/focusloop",
+    category: "Tool",
     notes: [
-      "Heatmap activity tracking",
-      "Smart URL classification",
-      "Productivity first",
+      "Auto URL classification",
+      "GitHub-style heatmap",
+      "Zero dependencies",
     ],
   },
   {
-    id: "ekyc-platform",
-    title: "eKYC Government ID",
-    description: "End-to-end identity verification platform.",
+    id: "mimijs",
+    title: "mimi.js",
+    description: "Open-source Node.js framework — 4× faster than Express.",
     problem:
-      "Scaling identity verification to over 10,000+ monthly checks with high security.",
+      "Express is great but slow, and every new project needs the same auth, docs, and database boilerplate wired up from scratch.",
     solution:
-      "Architected a robust frontend and optimization strategy that reduced bundle size by 35%.",
-    tech: ["React", "Security", "CI/CD", "AWS"],
-    category: "SaaS",
+      "A standalone Node.js framework (not built on Express) with auto route loading, built-in JWT auth, bcrypt, auto-generated Swagger docs from JSDoc, and MongoDB/SQLite adapters — batteries included, zero config.",
+    tech: ["JavaScript", "TypeScript", "Node.js", "Swagger", "JWT"],
+    link: "https://github.com/iammayank18/mimi",
+    category: "Tool",
     notes: [
-      "10k+ monthly verifications",
-      "Optimized for low-bandwidth",
-      "Strict data privacy",
+      "4× faster than Express",
+      "Auto route loading",
+      "Built-in JWT + Swagger",
     ],
   },
 ];
 
 export const LAB_EXPERIMENTS = [
-  { title: "LLM Prompt Orchestration", status: "Completed" },
-  { title: "Privacy-first Temporary Calling", status: "Completed" },
-  { title: "Digital Signature Platform", status: "Completed" },
-  { title: "Visual Heatmap Dashboard", status: "Experimental" },
+  { title: "React Native New Architecture Migration", status: "Completed" },
+  { title: "Multi-LLM Prompt Orchestration", status: "Completed" },
+  { title: "Swagger Auto-Doc Generation (mimi.js)", status: "Completed" },
+  { title: "GitHub-style Heatmap Dashboard", status: "Completed" },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "Reax Technology Platform Pvt Ltd",
+    company: "Reax Technology Platform Pvt Ltd (NASDAQ: REAX)",
     role: "Frontend Engineer",
-    period: "Feb 2024 – Mar 2026",
+    period: "Feb 2024 – Feb 2026",
     description:
-      "Collaborated with frontend, backend, and design teams to ship privacy-first systems for 1,000+ concurrent users across fintech and B2B workflows.",
-    tech: ["React.js", "TypeScript", "Jest", "Playwright", "Next.js"],
+      "Owned end-to-end delivery for a real estate platform serving 30,000+ agents across the US and Canada — real-time UIs, multi-step call flows, and React Native New Architecture migration.",
+    tech: ["React.js", "Next.js", "TypeScript", "React Native", "Redux Toolkit", "Vitest", "Detox"],
     achievements: [
-      "Built & shipped privacy-first temporary calling system with cross-functional team",
-      "Delivered React.js UI for digital signature platform serving 1,000+ brokers",
-      "Improved performance 40–50% via rendering optimizations and code splitting",
-      "Wrote 70% of all tests — achieved 90% coverage and cut review cycles by 60%",
+      "Platform used by 30,000+ agents — built real-time status UIs, multi-step call flow interfaces, and session screens collaborating with PMs and designers from spec to production",
+      "Migrated key mobile flows to React Native New Architecture, eliminating JS bridge lag from agents' core daily workflows",
+      "Reduced page load time by 35% via code splitting, lazy loading, and Redux Toolkit state management refactors",
+      "Achieved 85% test coverage using Detox and Vitest — cut release-blocking regressions to near-zero",
     ],
-    marginNote: "Privacy-first architect 🔐",
+    marginNote: "30k+ agents served 🏗️",
   },
   {
-    company: "Self-Directed",
-    role: "Freelance Frontend Developer",
+    company: "Freelance Full Stack Developer",
+    role: "Full Stack Developer",
     period: "Apr 2023 – Jan 2024",
     description:
-      "Delivered freelance React and TypeScript projects while deepening expertise in modern state management, SSR, and testing best practices.",
-    tech: ["React", "TypeScript", "Next.js", "Zustand", "React Query", "Jest"],
+      "Shipped full-stack web apps for 5+ clients — auth systems, admin dashboards, and REST APIs — taking each from 0 to 1 with full technical ownership and no team.",
+    tech: ["Next.js", "React", "Node.js", "MongoDB", "REST APIs"],
     achievements: [
-      "Delivered end-to-end React & TypeScript projects for small businesses",
-      "Deepened expertise in Zustand, React Query, and Next.js App Router",
-      "Strengthened testing practices with Jest and React Testing Library",
+      "Shipped full-stack apps for 5+ clients — auth systems, admin dashboards, and REST API integrations from scoping to production",
+      "Owned every technical decision independently: stack selection, architecture, API design, and deployment",
     ],
-    marginNote: "Always learning 📚",
+    marginNote: "0→1 ownership 🛠️",
   },
   {
     company: "Mindnerves Technologies",
     role: "Software Engineer",
     period: "Jul 2022 – Mar 2023",
     description:
-      "Built high-performance real-time applications using WebSocket protocols and efficient database indexing.",
-    tech: ["React", "TypeScript", "WebSocket", "PostgreSQL", "Node.js"],
+      "Built React Native mobile screens and analytics dashboards for high-traffic real-time applications.",
+    tech: ["React Native", "React", "TypeScript", "React Query", "Node.js"],
     achievements: [
-      "Shipped real-time job tracking app for 5,000+ active users",
-      "Built analytics dashboard tracking behavior across 10+ platforms with millisecond precision",
-      "Improved API response times by 30% through query optimization and indexing",
+      "Built React Native screens for a real-time job-tracking app serving 5,000+ users",
+      "Built analytics dashboards giving managers real-time visibility across 10+ platforms",
+      "Migrated data fetching to React Query — improved API efficiency by 25% and eliminated redundant network calls",
     ],
     marginNote: "Real-time specialist ⚡",
   },
@@ -179,12 +196,11 @@ export const EXPERIENCE: Experience[] = [
     role: "Frontend Developer",
     period: "Dec 2021 – Jun 2022",
     description:
-      "Designed and delivered digital fintech platforms with a focus on identity verification and user trust.",
-    tech: ["React", "Security", "Optimization", "eKYC"],
+      "Built the end-to-end user journey for an identity verification platform with 10,000+ monthly users.",
+    tech: ["HTML", "CSS", "JavaScript", "Figma"],
     achievements: [
-      "10,000+ identity verifications per month on eKYC platform",
-      "Built fully digital E-IPO system reducing processing time from days to hours",
-      "Reduced bundle size by 35% — improved Lighthouse score from ~55 to 80+",
+      "Built complete end-to-end user journey for identity verification — multi-step onboarding, document upload, and real-time validation for 10,000+ monthly users",
+      "Shipped 10+ consumer-facing features with pixel-accurate Figma handoff — zero design gaps, reducing review cycles",
     ],
     marginNote: "Fintech focused 🏦",
   },
@@ -193,27 +209,12 @@ export const EXPERIENCE: Experience[] = [
     role: "Frontend Developer",
     period: "Jan 2021 – Oct 2021",
     description:
-      "Delivered 15+ web and mobile projects with high client satisfaction and effective sprint planning.",
-    tech: ["HTML/CSS", "JavaScript", "React", "WordPress", "AWS"],
+      "Delivered 10+ web projects for small business clients during college — from requirements to deployment, fully solo.",
+    tech: ["WordPress", "HTML/CSS", "JavaScript", "PHP"],
     achievements: [
-      "Delivered 15+ client projects with 95% satisfaction rate",
-      "Reduced deployment time by 40% via CI/CD with GitHub Actions",
-      "Consistently completed projects 20% ahead of schedule",
+      "Delivered 10+ client web projects solo during college — from scoping to deployment",
     ],
-    marginNote: "Speed-to-market pro 🚀",
-  },
-  {
-    company: "Self-Employed",
-    role: "Full Stack Developer",
-    period: "Jan 2020 – Dec 2020",
-    description:
-      "Managed the full development lifecycle for CMS and CRM systems for international clients.",
-    tech: ["Full Stack", "CMS", "CRM", "Node.js"],
-    achievements: [
-      "100% on-time project delivery rate across all engagements",
-      "Architected scalable CMS & CRM systems for international clients",
-    ],
-    marginNote: "Entrepreneurial spirit 🌱",
+    marginNote: "Part-time during studies 📚",
   },
 ];
 
@@ -271,7 +272,7 @@ export const SKILLS_ROADMAP = [
     skills: [
       {
         name: "TypeScript",
-        level: 65,
+        level: 85,
         details: "Strictly typed large-scale applications.",
       },
       {
@@ -294,7 +295,7 @@ export const SKILLS_ROADMAP = [
     skills: [
       {
         name: "LLM Integration",
-        level: 50,
+        level: 70,
         details: "Leveraging OpenAI/Anthropic APIs for smart features.",
       },
       {
@@ -351,7 +352,7 @@ export const ABOUT_SKILLS = [
   },
   {
     name: "TypeScript",
-    level: 65,
+    level: 85,
     details:
       "Architecting type-safe codebases for better maintainability and developer experience.",
   },
@@ -374,15 +375,15 @@ export const ABOUT_SKILLS = [
       "Rapidly delivering modern, responsive, and performance-optimized user interfaces.",
   },
   {
-    name: "Testing (Playwright)",
-    level: 95,
+    name: "Testing (Jest/Vitest/Detox)",
+    level: 90,
     details:
-      "Ensuring 90%+ quality standards with automated E2E and unit testing suites.",
+      "Achieving 85%+ coverage on critical flows with unit, integration, and mobile E2E tests.",
   },
   {
-    name: "LLM Integration",
-    level: 40,
+    name: "State Management",
+    level: 90,
     details:
-      "Integrating AI-powered features using OpenAI and Anthropic APIs into production.",
+      "Redux Toolkit, React Query, and Zustand across large-scale web and mobile applications.",
   },
 ];

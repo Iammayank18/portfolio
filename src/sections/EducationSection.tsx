@@ -38,7 +38,7 @@ export const EducationSection = () => (
 
             <div className="flex flex-wrap items-center gap-3 mt-4">
               <span className="font-mono text-sm bg-gray-50 px-3 py-1 sketch-border">
-                B.Tech Computer Science
+                Bachelor of Technology, Computer Science
               </span>
               <span className="font-mono text-sm bg-yellow-50 px-3 py-1 sketch-border">
                 2019 – 2023
