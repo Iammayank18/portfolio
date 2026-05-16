@@ -35,7 +35,7 @@ export const TerminalSection = () => {
 
   useEffect(() => {
     if (!isTyping) {
-      inputRef.current?.focus();
+      inputRef.current?.focus({ preventScroll: true });
     }
   }, [isTyping]);
 
@@ -252,7 +252,6 @@ export const TerminalSection = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               className="bg-transparent outline-none w-full text-white caret-transparent relative z-10"
-              autoFocus
               spellCheck={false}
               disabled={isTyping}
             />

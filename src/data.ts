@@ -150,72 +150,48 @@ export const LAB_EXPERIMENTS = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "Reax Technology Platform Pvt Ltd (NASDAQ: REAX)",
-    role: "Frontend Engineer",
-    period: "Feb 2024 – Feb 2026",
+    company: "Reax Technology Platform Pvt Ltd",
+    role: "Software Engineer",
+    period: "Feb 2024 – Mar 2026",
     description:
-      "Owned end-to-end delivery for a real estate platform serving 30,000+ agents across the US and Canada — real-time UIs, multi-step call flows, and React Native New Architecture migration.",
-    tech: ["React.js", "Next.js", "TypeScript", "React Native", "Redux Toolkit", "Vitest", "Detox"],
+      "Built and maintained scalable product features using React, TypeScript, Node.js, and REST APIs for a SaaS platform serving 30K+ users.",
+    tech: ["React.js", "TypeScript", "Node.js", "REST APIs", "Jest", "Vitest", "Playwright"],
     achievements: [
-      "Platform used by 30,000+ agents — built real-time status UIs, multi-step call flow interfaces, and session screens collaborating with PMs and designers from spec to production",
-      "Migrated key mobile flows to React Native New Architecture, eliminating JS bridge lag from agents' core daily workflows",
-      "Reduced page load time by 35% via code splitting, lazy loading, and Redux Toolkit state management refactors",
-      "Achieved 85% test coverage using Detox and Vitest — cut release-blocking regressions to near-zero",
+      "Designed reusable component systems shared across multiple applications, improving development consistency and reducing duplicated implementation effort.",
+      "Improved frontend performance by reducing page load time by 35% through route-level code splitting, deferred initialization, and bundle optimization strategies.",
+      "Worked closely with product and design teams to translate complex workflows into maintainable production systems.",
+      "Maintained high test coverage using Jest, Vitest, and Playwright for critical application flows."
     ],
-    marginNote: "30k+ agents served 🏗️",
+    marginNote: "30k+ users served 🏗️",
   },
   {
-    company: "Freelance Full Stack Developer",
-    role: "Full Stack Developer",
+    company: "Wayverb",
+    role: "Founder & Software Engineer",
     period: "Apr 2023 – Jan 2024",
     description:
-      "Shipped full-stack web apps for 5+ clients — auth systems, admin dashboards, and REST APIs — taking each from 0 to 1 with full technical ownership and no team.",
-    tech: ["Next.js", "React", "Node.js", "MongoDB", "REST APIs"],
+      "Built and launched a full-stack school management platform from scratch using React, React Native, Node.js, Express.js, and MongoDB.",
+    tech: ["React", "React Native", "Node.js", "Express.js", "MongoDB"],
     achievements: [
-      "Shipped full-stack apps for 5+ clients — auth systems, admin dashboards, and REST API integrations from scoping to production",
-      "Owned every technical decision independently: stack selection, architecture, API design, and deployment",
+      "Designed backend APIs, database structures, authentication flows, and frontend architecture independently.",
+      "Implemented role-based workflows for administrators, teachers, and parents with secure access control.",
+      "Managed deployment, feature iteration, debugging, and production maintenance across the platform lifecycle."
     ],
     marginNote: "0→1 ownership 🛠️",
   },
   {
     company: "Mindnerves Technologies",
-    role: "Software Engineer",
+    role: "Software Engineer Intern",
     period: "Jul 2022 – Mar 2023",
     description:
-      "Built React Native mobile screens and analytics dashboards for high-traffic real-time applications.",
-    tech: ["React Native", "React", "TypeScript", "React Query", "Node.js"],
+      "Developed React-based interfaces for a real-time job tracking platform with thousands of active users.",
+    tech: ["React", "React Query", "TypeScript", "Node.js"],
     achievements: [
-      "Built React Native screens for a real-time job-tracking app serving 5,000+ users",
-      "Built analytics dashboards giving managers real-time visibility across 10+ platforms",
-      "Migrated data fetching to React Query — improved API efficiency by 25% and eliminated redundant network calls",
+      "Optimized rendering performance and state handling for data-intensive workflows.",
+      "Reduced redundant API requests by implementing cache-first data fetching strategies using React Query.",
+      "Contributed to feature delivery, bug fixes, and internal engineering improvements within an agile team environment."
     ],
     marginNote: "Real-time specialist ⚡",
-  },
-  {
-    company: "Meon AI",
-    role: "Frontend Developer",
-    period: "Dec 2021 – Jun 2022",
-    description:
-      "Built the end-to-end user journey for an identity verification platform with 10,000+ monthly users.",
-    tech: ["HTML", "CSS", "JavaScript", "Figma"],
-    achievements: [
-      "Built complete end-to-end user journey for identity verification — multi-step onboarding, document upload, and real-time validation for 10,000+ monthly users",
-      "Shipped 10+ consumer-facing features with pixel-accurate Figma handoff — zero design gaps, reducing review cycles",
-    ],
-    marginNote: "Fintech focused 🏦",
-  },
-  {
-    company: "Exponus Media",
-    role: "Frontend Developer",
-    period: "Jan 2021 – Oct 2021",
-    description:
-      "Delivered 10+ web projects for small business clients during college — from requirements to deployment, fully solo.",
-    tech: ["WordPress", "HTML/CSS", "JavaScript", "PHP"],
-    achievements: [
-      "Delivered 10+ client web projects solo during college — from scoping to deployment",
-    ],
-    marginNote: "Part-time during studies 📚",
-  },
+  }
 ];
 
 export const SKILLS_ROADMAP = [
@@ -375,10 +351,10 @@ export const ABOUT_SKILLS = [
       "Rapidly delivering modern, responsive, and performance-optimized user interfaces.",
   },
   {
-    name: "Testing (Jest/Vitest/Detox)",
+    name: "Testing (Jest/Vitest/Playwright)",
     level: 90,
     details:
-      "Achieving 85%+ coverage on critical flows with unit, integration, and mobile E2E tests.",
+      "Achieving 85%+ coverage on critical flows with unit, integration, and E2E tests.",
   },
   {
     name: "State Management",

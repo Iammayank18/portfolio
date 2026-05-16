@@ -3,7 +3,7 @@ import { ChevronDown, Download, ArrowRight } from "lucide-react";
 import { useHeroAnimations } from "../hooks/useHeroAnimations";
 
 const STATS = [
-  { value: "4.5+", label: "Years" },
+  { value: "3.5+", label: "Years" },
   { value: "30,000+", label: "Users" },
   { value: "4", label: "Products" },
 ];
@@ -25,7 +25,7 @@ export const HeroSection = ({ isBooting }: { isBooting: boolean }) => {
           className="flex items-center justify-center gap-2 font-mono text-sm text-gray-600 border border-gray-200 rounded-full px-4 py-1.5 mb-6 bg-white/60 backdrop-blur-sm w-fit mx-auto"
         >
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Frontend Engineer · Open to Work
+          Software Engineer · Open to Work
         </motion.div>
 
         {/* Name */}
@@ -70,9 +70,9 @@ export const HeroSection = ({ isBooting }: { isBooting: boolean }) => {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          {/* Download CV — place Mayank_CV.pdf in /public/ to enable */}
+          {/* Download CV */}
           <a
-            href="/Mayank_CV.pdf"
+            href="/Mayank_Thakur_Resume_SoftwareEngineer.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 sketch-border bg-black text-white font-sketch text-lg hover:bg-gray-800 transition-colors"
           >
