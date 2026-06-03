@@ -72,6 +72,24 @@ export const IDEAS: Idea[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: "unused",
+    title: "Unused",
+    description:
+      "Published VS Code Extension — detect & remove dead code in TS/JS.",
+    problem:
+      "Codebases accumulate dead code — unused files, unused exports, and commented-out blocks — with no easy way to discover them.",
+    solution:
+      "A VS Code extension that analyzes your workspace to find unused files, exports, and commented-out code, surfaced in a tree view with folder-level analysis and configurable ignore/include patterns.",
+    tech: ["TypeScript", "VS Code API"],
+    link: "https://marketplace.visualstudio.com/items?itemName=mayank-thakur.unused",
+    category: "Tool",
+    notes: [
+      "5★ rating on marketplace",
+      "Configurable ignore/include patterns",
+      "Framework-aware entry points",
+    ],
+  },
+  {
     id: "wayverb",
     title: "Wayverb",
     description: "School Management SaaS — live with paying customers.",
@@ -150,31 +168,33 @@ export const LAB_EXPERIMENTS = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "Reax Technology Platform Pvt Ltd",
+    company: "REAL (Reax Technology)",
     role: "Software Engineer",
     period: "Feb 2024 – Mar 2026",
     description:
-      "Built and maintained scalable product features using React, TypeScript, Node.js, and REST APIs for a SaaS platform serving 30K+ users.",
-    tech: ["React.js", "TypeScript", "Node.js", "REST APIs", "Jest", "Vitest", "Playwright"],
+      "Owned the digital signature platform across web (React.js/Next.js) and mobile (React Native), designing component architecture, state management, and API integrations from requirements through production delivery.",
+    tech: ["React.js", "Next.js", "React Native", "TypeScript", "Redux", "TanStack Query", "Tailwind CSS", "Jest", "Playwright", "Datadog"],
     achievements: [
-      "Designed reusable component systems shared across multiple applications, improving development consistency and reducing duplicated implementation effort.",
-      "Improved frontend performance by reducing page load time by 35% through route-level code splitting, deferred initialization, and bundle optimization strategies.",
-      "Worked closely with product and design teams to translate complex workflows into maintainable production systems.",
-      "Maintained high test coverage using Jest, Vitest, and Playwright for critical application flows."
+      "Designed a shared React.js + React Native component library in TypeScript — single source of truth for UI patterns across web and mobile teams, with composable APIs and WCAG/ARIA compliance.",
+      "Optimized the Bolt CRM Real Estate platform by identifying a 35% performance regression and resolving bundle size and Redux hydration bottlenecks through code splitting, lazy loading, and deferred initialization.",
+      "Improved React Native application performance using React DevTools and Flipper, validating fixes and monitoring production stability with Datadog.",
+      "Defined API contracts with backend teams, aligning request/response schemas, validation rules, and error handling before implementation to reduce integration defects.",
+      "Maintained 85% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries."
     ],
-    marginNote: "30k+ users served 🏗️",
+    marginNote: "Digital signature platform ✍️",
   },
   {
     company: "Wayverb",
     role: "Founder & Software Engineer",
     period: "Apr 2023 – Jan 2024",
     description:
-      "Built and launched a full-stack school management platform from scratch using React, React Native, Node.js, Express.js, and MongoDB.",
-    tech: ["React", "React Native", "Node.js", "Express.js", "MongoDB"],
+      "Built a school management SaaS using React.js, React Native, Node.js, NestJS, and MongoDB, supporting administrators, teachers, parents, and students through a shared backend architecture.",
+    tech: ["React", "React Native", "Node.js", "NestJS", "MongoDB"],
     achievements: [
-      "Designed backend APIs, database structures, authentication flows, and frontend architecture independently.",
-      "Implemented role-based workflows for administrators, teachers, and parents with secure access control.",
-      "Managed deployment, feature iteration, debugging, and production maintenance across the platform lifecycle."
+      "Architected a single API layer consumed by web and mobile applications, eliminating duplicated business logic and simplifying feature development.",
+      "Implemented JWT authentication, refresh-token rotation, and RBAC across multiple user roles, enforcing authorization consistently at both API and UI layers.",
+      "Revised the database schema twice after conducting customer discovery with schools, aligning the product data model with real operational workflows.",
+      "Managed AWS infrastructure, Docker deployments, GitHub Actions CI/CD pipelines, and production debugging independently."
     ],
     marginNote: "0→1 ownership 🛠️",
   },
@@ -183,12 +203,12 @@ export const EXPERIENCE: Experience[] = [
     role: "Software Engineer Intern",
     period: "Jul 2022 – Mar 2023",
     description:
-      "Developed React-based interfaces for a real-time job tracking platform with thousands of active users.",
-    tech: ["React", "React Query", "TypeScript", "Node.js"],
+      "Built and shipped React Native features for a real-time job tracking platform used by thousands of active users.",
+    tech: ["React Native", "React", "TanStack Query", "TypeScript", "Node.js"],
     achievements: [
-      "Optimized rendering performance and state handling for data-intensive workflows.",
-      "Reduced redundant API requests by implementing cache-first data fetching strategies using React Query.",
-      "Contributed to feature delivery, bug fixes, and internal engineering improvements within an agile team environment."
+      "Reduced redundant API requests by ~25% by migrating data fetching to TanStack Query and implementing cache-first patterns with request deduplication.",
+      "Built and shipped React Native features used by thousands of active users.",
+      "Collaborated through code reviews, QA cycles, and automated CI pipelines to deliver production-ready functionality."
     ],
     marginNote: "Real-time specialist ⚡",
   }

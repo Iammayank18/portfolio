@@ -72,7 +72,7 @@ export const HeroSection = ({ isBooting }: { isBooting: boolean }) => {
         >
           {/* Download CV */}
           <a
-            href="/Mayank_Thakur_Resume_SoftwareEngineer.pdf"
+            href="/Mayank_Thakur_.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 sketch-border bg-black text-white font-sketch text-lg hover:bg-gray-800 transition-colors"
           >
