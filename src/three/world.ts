@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
 /**
  * SurvivalWorld
@@ -76,12 +77,28 @@ export class SurvivalWorld {
     return v;
   }
 
+  // ridged noise -> sharp natural mountain crests (0..~1.6)
+  private ridges(x: number, z: number): number {
+    const a = Math.sin(x * 0.085 + z * 0.045 + 1.3);
+    const b = Math.cos(z * 0.075 - x * 0.04 + 0.4);
+    const c = Math.sin(x * 0.17 - z * 0.12);
+    let r = (1 - Math.abs(a)) * (1 - Math.abs(b));
+    r += (1 - Math.abs(c)) * 0.45;
+    return r;
+  }
+
   private height(x: number, z: number): number {
-    // raise mountains toward the back, keep a clearing near the fire (origin)
-    const ridge = this.noise(x, z);
     const dist = Math.sqrt(x * x + z * z);
-    const clearing = THREE.MathUtils.clamp((dist - 4) / 6, 0, 1);
-    return ridge * clearing + (z < -10 ? (-z - 10) * 0.22 : 0) * clearing;
+    // flat clearing around the campfire, then gentle rolling hills
+    const clearing = THREE.MathUtils.clamp((dist - 5) / 7, 0, 1);
+    let h = this.noise(x, z) * clearing;
+
+    // mountain belt: rises with distance, taller toward the back (−z)
+    const far = THREE.MathUtils.clamp((dist - 20) / 26, 0, 1);
+    const back = 0.45 + THREE.MathUtils.clamp((-z - 4) / 42, 0, 1) * 0.55;
+    h += far * far * back * this.ridges(x, z) * 17;
+
+    return h;
   }
 
   private buildLights() {
@@ -138,36 +155,68 @@ export class SurvivalWorld {
     return this.height(x, z) - 1.2 + yOffset;
   }
 
+  // a single low-poly pine: trunk + 3 stacked foliage tiers, merged into one geo
+  private makePine(): THREE.BufferGeometry {
+    const parts: THREE.BufferGeometry[] = [];
+    const paint = (g: THREE.BufferGeometry, hex: number) => {
+      const col = new THREE.Color(hex);
+      const n = g.attributes.position.count;
+      const arr = new Float32Array(n * 3);
+      for (let i = 0; i < n; i++) {
+        arr[i * 3] = col.r;
+        arr[i * 3 + 1] = col.g;
+        arr[i * 3 + 2] = col.b;
+      }
+      g.setAttribute("color", new THREE.BufferAttribute(arr, 3));
+      return g;
+    };
+
+    const trunk = new THREE.CylinderGeometry(0.07, 0.11, 0.55, 5);
+    trunk.translate(0, 0.27, 0);
+    parts.push(paint(trunk, 0xcabfa8)); // warm grey bark
+
+    const tiers: Array<[number, number, number]> = [
+      // [radius, height, baseY]
+      [0.62, 0.9, 0.55],
+      [0.48, 0.8, 1.05],
+      [0.32, 0.7, 1.55],
+    ];
+    tiers.forEach(([r, h, y]) => {
+      const c = new THREE.ConeGeometry(r, h, 7);
+      c.translate(0, y + h / 2 - 0.1, 0);
+      parts.push(paint(c, 0xffffff));
+    });
+
+    return mergeGeometries(parts, false)!;
+  }
+
   private buildTrees() {
-    // low-poly pine = trunk merged conceptually via two cones (use one geo, instanced)
-    const cone = new THREE.ConeGeometry(0.9, 2.6, 6);
-    cone.translate(0, 1.3, 0);
+    const pine = this.makePine();
     const mat = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
+      vertexColors: true,
       flatShading: true,
       roughness: 1,
     });
-    // emissive faint green tip handled by vertex colors
-    const count = 90;
-    this.treeMesh = new THREE.InstancedMesh(cone, mat, count);
+    const count = 120;
+    this.treeMesh = new THREE.InstancedMesh(pine, mat, count);
     const dummy = new THREE.Object3D();
     let placed = 0;
     let guard = 0;
     while (placed < count && guard < count * 12) {
       guard++;
-      const x = (Math.random() - 0.5) * 90;
-      const z = (Math.random() - 0.5) * 90;
+      const x = (Math.random() - 0.5) * 96;
+      const z = (Math.random() - 0.5) * 96;
       const d = Math.sqrt(x * x + z * z);
-      if (d < 6 || d > 48) continue; // keep clearing around the fire
-      const s = 0.6 + Math.random() * 1.6;
+      if (d < 9 || d > 38) continue; // forest the valley + foothills only
+      const s = 0.45 + Math.random() * 0.85;
       dummy.position.set(x, this.placeOnGround(x, z), z);
-      dummy.scale.set(s, s + Math.random() * 0.6, s);
+      dummy.scale.set(s, s + Math.random() * 0.5, s);
       dummy.rotation.y = Math.random() * Math.PI;
       dummy.updateMatrix();
       this.treeMesh.setMatrixAt(placed, dummy.matrix);
       // tint: most white, some faint forest
       const c = new THREE.Color(
-        Math.random() > 0.78 ? 0xdfeede : 0xffffff
+        Math.random() > 0.72 ? 0xd8ead7 : 0xffffff
       );
       this.treeMesh.setColorAt(placed, c);
       placed++;
