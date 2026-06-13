@@ -7,7 +7,7 @@ export const SURVIVOR = {
   classTitle: "Survival Engineer — Class: Frontend",
   tagline:
     "I drop into unmapped problem-space and build production React systems that survive real traffic.",
-  bio: "4+ years in the field shipping production React, React Native and Node systems to 5,000+ users across fintech, AI and SaaS. I build component architectures, kill performance regressions, and own features from raw requirements to live deployment. I travel light: type-safe, tested, and fast.",
+  bio: "3.5+ years in the field shipping production React, React Native and Node systems to 5,000+ users across fintech, AI and SaaS. I build component architectures, kill performance regressions, and own features from raw requirements to live deployment. I travel light: type-safe, tested, and fast.",
   location: "IN · 28.6° N, 77.2° E",
   resume: "/Mayank_Thakur_.pdf",
   email: "abhinavthakur958@gmail.com",
@@ -20,9 +20,27 @@ export const SURVIVOR = {
 
 // Decorative survival "vitals" — purely cosmetic HUD numbers
 export const VITALS = [
-  { label: "HP", key: "experience", value: 92, accent: "amber" as const, note: "4+ yrs in field" },
-  { label: "STAMINA", key: "shipping", value: 88, accent: "forest" as const, note: "ships fast" },
-  { label: "SUPPLY", key: "coverage", value: 85, accent: "ink" as const, note: "85% test cov." },
+  {
+    label: "HP",
+    key: "experience",
+    value: 92,
+    accent: "amber" as const,
+    note: "3.5+ yrs in field",
+  },
+  {
+    label: "STAMINA",
+    key: "shipping",
+    value: 88,
+    accent: "forest" as const,
+    note: "ships fast",
+  },
+  {
+    label: "SUPPLY",
+    key: "coverage",
+    value: 85,
+    accent: "ink" as const,
+    note: "85% test cov.",
+  },
 ];
 
 // Stat block for the Base Camp character card
@@ -36,16 +54,37 @@ export const CHAR_STATS = [
 ];
 
 // Map experience -> "expedition regions"
-export const REGION_META: Record<string, { region: string; biome: string; coord: string }> = {
-  "REAL (Reax Technology)": { region: "THE SIGNATURE HIGHLANDS", biome: "Fintech · Web + Mobile", coord: "REGION 03" },
-  Wayverb: { region: "FOUNDER'S BASIN", biome: "SaaS · 0→1", coord: "REGION 02" },
-  "Mindnerves Technologies": { region: "REALTIME LOWLANDS", biome: "Mobile · Realtime", coord: "REGION 01" },
+export const REGION_META: Record<
+  string,
+  { region: string; biome: string; coord: string }
+> = {
+  "REAL (Reax Technology)": {
+    region: "THE SIGNATURE HIGHLANDS",
+    biome: "Fintech · Web + Mobile",
+    coord: "REGION 03",
+  },
+  Wayverb: {
+    region: "FOUNDER'S BASIN",
+    biome: "SaaS · 0→1",
+    coord: "REGION 02",
+  },
+  "Mindnerves Technologies": {
+    region: "REALTIME LOWLANDS",
+    biome: "Mobile · Realtime",
+    coord: "REGION 01",
+  },
 };
 
 // Rarity tiers for the inventory (skills)
 export type Rarity = "common" | "rare" | "epic" | "legendary";
 export const rarityFor = (level: number): Rarity =>
-  level >= 95 ? "legendary" : level >= 88 ? "epic" : level >= 80 ? "rare" : "common";
+  level >= 95
+    ? "legendary"
+    : level >= 88
+      ? "epic"
+      : level >= 80
+        ? "rare"
+        : "common";
 
 export const EDUCATION = {
   degree: "B.Tech, Computer Science",
@@ -229,13 +268,24 @@ export const EXPERIENCE: Experience[] = [
     period: "Feb 2024 – Mar 2026",
     description:
       "Owned the digital signature platform across web (React.js/Next.js) and mobile (React Native), designing component architecture, state management, and API integrations from requirements through production delivery.",
-    tech: ["React.js", "Next.js", "React Native", "TypeScript", "Redux", "TanStack Query", "Tailwind CSS", "Jest", "Playwright", "Datadog"],
+    tech: [
+      "React.js",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "Redux",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Jest",
+      "Playwright",
+      "Datadog",
+    ],
     achievements: [
       "Designed a shared React.js + React Native component library in TypeScript — single source of truth for UI patterns across web and mobile teams, with composable APIs and WCAG/ARIA compliance.",
       "Optimized the Bolt CRM Real Estate platform by identifying a 35% performance regression and resolving bundle size and Redux hydration bottlenecks through code splitting, lazy loading, and deferred initialization.",
       "Improved React Native application performance using React DevTools and Flipper, validating fixes and monitoring production stability with Datadog.",
       "Defined API contracts with backend teams, aligning request/response schemas, validation rules, and error handling before implementation to reduce integration defects.",
-      "Maintained 85% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries."
+      "Maintained 85% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries.",
     ],
     marginNote: "Digital signature platform ✍️",
   },
@@ -250,7 +300,7 @@ export const EXPERIENCE: Experience[] = [
       "Architected a single API layer consumed by web and mobile applications, eliminating duplicated business logic and simplifying feature development.",
       "Implemented JWT authentication, refresh-token rotation, and RBAC across multiple user roles, enforcing authorization consistently at both API and UI layers.",
       "Revised the database schema twice after conducting customer discovery with schools, aligning the product data model with real operational workflows.",
-      "Managed AWS infrastructure, Docker deployments, GitHub Actions CI/CD pipelines, and production debugging independently."
+      "Managed AWS infrastructure, Docker deployments, GitHub Actions CI/CD pipelines, and production debugging independently.",
     ],
     marginNote: "0→1 ownership 🛠️",
   },
@@ -264,10 +314,10 @@ export const EXPERIENCE: Experience[] = [
     achievements: [
       "Reduced redundant API requests by ~25% by migrating data fetching to TanStack Query and implementing cache-first patterns with request deduplication.",
       "Built and shipped React Native features used by thousands of active users.",
-      "Collaborated through code reviews, QA cycles, and automated CI pipelines to deliver production-ready functionality."
+      "Collaborated through code reviews, QA cycles, and automated CI pipelines to deliver production-ready functionality.",
     ],
     marginNote: "Real-time specialist ⚡",
-  }
+  },
 ];
 
 export const SKILLS_ROADMAP = [

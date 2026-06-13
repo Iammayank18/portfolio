@@ -27,7 +27,7 @@ export function BaseCamp() {
 
             <div className="mt-10 grid sm:grid-cols-3 gap-4">
               {[
-                ["04+", "YEARS IN FIELD"],
+                ["3.5+", "YEARS IN FIELD"],
                 ["5K+", "USERS REACHED"],
                 ["85%", "TEST COVERAGE"],
               ].map(([big, label]) => (
