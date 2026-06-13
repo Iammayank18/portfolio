@@ -17,25 +17,27 @@ npm run clean        # Remove dist/
 
 ## Architecture
 
-This is a **single-page portfolio** built as a Google AI Studio app. The entire application lives in `src/App.tsx` — one large file with no routing, no state management library, and no component splitting across files.
+This is a **single-page portfolio** with an **open-world-survival** theme on a **white / monochrome** palette (amber = campfire, forest green = wilderness as the only accents). No routing, no state-management library. `src/App.tsx` is a thin shell; UI is split into `src/sections/` and `src/components/`.
 
 **Tech stack:**
 - React 19 + TypeScript, built with Vite 6
 - **Tailwind CSS v4** (configured via `@tailwindcss/vite` plugin — no `tailwind.config.js`)
+- **Three.js** (vanilla) for the fixed background 3D world
 - **Framer Motion** (`motion/react`) for declarative animations
 - **GSAP + ScrollTrigger** for imperative scroll-driven animations
-- **`@google/genai`** SDK available (Gemini API key injected via `vite.config.ts`)
+- **Lenis** for smooth momentum scrolling (driven by GSAP's ticker)
 
-**Data is hardcoded** in `App.tsx` as const arrays: `PROJECTS`, `IDEAS`, `EXPERIENCE`, `SKILLS_ROADMAP`, `LAB_EXPERIMENTS`. To update portfolio content, edit these arrays directly.
+**The 3D world** lives in `src/three/world.ts` (`SurvivalWorld` class — low-poly white terrain, instanced trees/rocks, flickering campfire, drifting motes, fog). It's mounted full-screen behind the page by `src/components/WorldCanvas.tsx`, which feeds it pointer + scroll so the camera dollies through the world as you scroll. Fails silently if WebGL is unavailable.
 
-**Custom CSS utilities** in `src/index.css`:
-- `sketch-border` — organic hand-drawn border radius
-- `sketch-underline` — animated underline that thickens on hover
-- `scribble-hover` — yellow scribble background on hover
-- `animate-wobble`, `animate-draw` — custom keyframe animations
-- `font-sketch` maps to **Gochi Hand** (Google Font), `font-mono` to **JetBrains Mono**
+**Sections** (`src/sections/`), each themed: `Hero` (title screen), `BaseCamp` (about + character sheet), `Expeditions` (experience as a GSAP-drawn trail), `Inventory` (skills as rarity-tiered item slots), `Crafted` (projects as openable blueprints), `FieldNotes` (draggable ideas + experiment log), `Signal` (contact), `Footer`.
 
-**Animation pattern:** The app uses both GSAP and Motion together. GSAP is used imperatively inside `useEffect`/`useLayoutEffect` with `gsap.context()` for cleanup. Motion/Framer is used declaratively via JSX props (`initial`, `animate`, `whileInView`, etc.). `useScroll` + `useSpring` + `useTransform` from Motion drive the scroll progress bar.
+**Chrome components** (`src/components/`): `NavBar`, `HUD` (vitals/coords/travel meter overlay), `Cursor` (reticle), `Loader` (boot screen), `SectionHeader`.
+
+**Data is hardcoded** in `src/data.ts` as const arrays/objects: `SURVIVOR`, `VITALS`, `CHAR_STATS`, `REGION_META`, `PROJECTS`, `IDEAS`, `EXPERIENCE`, `ABOUT_SKILLS`, `SKILLS_ROADMAP`, `LAB_EXPERIMENTS`. To update portfolio content, edit these directly.
+
+**Theme tokens** in `src/index.css`: CSS variables `--ink/--ash/--fog/--paper/--amber/--forest/--line`; utilities `panel`, `panel-soft`, `slot`, `ticked`, `meter`, `hud-*`, `btn-ink`, `btn-ghost`, `display-xl/lg`, `text-outline`, `reticle`, `grain`. Fonts: `--font-display` = **Space Grotesk**, `--font-mono` = **JetBrains Mono**, `--font-sans` = **Inter**.
+
+**Animation pattern:** GSAP is used imperatively inside `useEffect` with `gsap.context()` for cleanup (Expeditions trail + reveals, smooth scroll). Motion/Framer is used declaratively via JSX props (`initial`, `whileInView`, stagger, drag, `AnimatePresence`).
 
 **Path alias:** `@` resolves to the project root (not `src/`).
 

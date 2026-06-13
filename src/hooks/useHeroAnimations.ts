@@ -6,35 +6,15 @@ export function useHeroAnimations(isBooting: boolean) {
     if (isBooting) return;
 
     const ctx = gsap.context(() => {
-      const heroTl = gsap.timeline();
-      heroTl
-        .from(".hero-title", {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          ease: "power4.out",
-        })
-        .from(
-          ".hero-subtitle",
-          {
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.5",
-        )
-        .from(
-          ".hero-doodle",
-          {
-            scale: 0,
-            rotate: -45,
-            opacity: 0,
-            duration: 1,
-            ease: "back.out(1.7)",
-          },
-          "-=0.3",
-        );
+      // The hero name is revealed word-by-word by <RevealText>; this
+      // timeline only choreographs the subtitle fade-up.
+      gsap.from(".hero-subtitle", {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: 0.6,
+      });
     });
 
     return () => ctx.revert();

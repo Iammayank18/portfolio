@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import type { MotionValue } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { useMagnetic } from "../hooks/useMagnetic";
 
 const NAV_LINKS = [
   { name: "Projects", href: "#projects" },
@@ -10,6 +11,24 @@ const NAV_LINKS = [
   { name: "Ideas", href: "#ideas" },
   { name: "Contact", href: "#contact" },
 ];
+
+const MagneticLink = ({ name, href }: { name: string; href: string }) => {
+  const ref = useMagnetic<HTMLAnchorElement>({ strength: 0.5, padding: 12 });
+  return (
+    <a
+      ref={ref}
+      href={href}
+      className="relative group transition-transform duration-300 hover:-rotate-2 will-change-transform inline-block"
+    >
+      {name}
+      <motion.span
+        className="absolute -bottom-1 left-0 w-0 h-1 bg-white/60 rounded-full"
+        whileHover={{ width: "100%" }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      />
+    </a>
+  );
+};
 
 export const NavBar = ({ scaleX }: { scaleX: MotionValue<number> }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -29,18 +48,7 @@ export const NavBar = ({ scaleX }: { scaleX: MotionValue<number> }) => {
         {/* Desktop links */}
         <div className="hidden md:flex gap-8 font-sketch text-xl text-white">
           {NAV_LINKS.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="relative group transition-all duration-300 hover:-rotate-2"
-            >
-              {item.name}
-              <motion.span
-                className="absolute -bottom-1 left-0 w-0 h-1 bg-white/60 rounded-full"
-                whileHover={{ width: "100%" }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              />
-            </a>
+            <MagneticLink key={item.name} name={item.name} href={item.href} />
           ))}
         </div>
 

@@ -1,70 +1,50 @@
-import { useState, useRef } from "react";
-import { motion, useScroll, useSpring, AnimatePresence } from "motion/react";
-import { FloatingCharacter } from "./components/FloatingCharacter";
-import { SketchIntro } from "./components/SketchIntro";
-import { NavBar } from "./sections/NavBar";
-import { HeroSection } from "./sections/HeroSection";
-import { AboutSection } from "./sections/AboutSection";
-import { ExperienceSection } from "./sections/ExperienceSection";
-import { RoadmapSection } from "./sections/RoadmapSection";
-import { ProjectsSection } from "./sections/ProjectsSection";
-import { LabSection } from "./sections/LabSection";
-import { IdeasSection } from "./sections/IdeasSection";
-import { TerminalSectionWrapper } from "./sections/TerminalSectionWrapper";
-import { ContactSection } from "./sections/ContactSection";
-import { EducationSection } from "./sections/EducationSection";
+import { useState } from "react";
+import { AnimatePresence } from "motion/react";
+import { WorldCanvas } from "./components/WorldCanvas";
+import { Cursor } from "./components/Cursor";
+import { Loader } from "./components/Loader";
+import { HUD } from "./components/HUD";
+import { NavBar } from "./components/NavBar";
+import { Hero } from "./sections/Hero";
+import { BaseCamp } from "./sections/BaseCamp";
+import { Expeditions } from "./sections/Expeditions";
+import { Inventory } from "./sections/Inventory";
+import { Crafted } from "./sections/Crafted";
+import { FieldNotes } from "./sections/FieldNotes";
+import { Signal } from "./sections/Signal";
 import { Footer } from "./sections/Footer";
-import { ProjectModal } from "./sections/ProjectModal";
-import type { Project } from "./data";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
 
 export default function App() {
-  const [isBooting, setIsBooting] = useState(true);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const { scrollYProgress: pageScrollProgress } = useScroll();
-  const scaleX = useSpring(pageScrollProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  const [booting, setBooting] = useState(true);
+  useSmoothScroll();
 
   return (
-    <div className="paper-texture min-h-screen selection:bg-yellow-200">
-      <AnimatePresence mode="wait">
-        {isBooting ? (
-          <>
-            <SketchIntro key="intro" onComplete={() => setIsBooting(false)} />
-          </>
-        ) : (
-          <motion.div
-            key="content"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <FloatingCharacter />
-            <NavBar scaleX={scaleX} />
-            <HeroSection isBooting={isBooting} />
-            <AboutSection isBooting={isBooting} />
-            <ExperienceSection isBooting={isBooting} />
-            <EducationSection />
-            <RoadmapSection isBooting={isBooting} />
-            <ProjectsSection
-              onSelect={setSelectedProject}
-              isBooting={isBooting}
-            />
-            <LabSection isBooting={isBooting} />
-            <IdeasSection />
-            <TerminalSectionWrapper />
-            <ContactSection />
-            <Footer />
-            <ProjectModal
-              selectedProject={selectedProject}
-              onClose={() => setSelectedProject(null)}
-            />
-          </motion.div>
-        )}
+    <>
+      <WorldCanvas />
+      <Cursor />
+      <div className="grain" aria-hidden />
+
+      <AnimatePresence>
+        {booting && <Loader key="loader" onDone={() => setBooting(false)} />}
       </AnimatePresence>
-    </div>
+
+      {!booting && (
+        <>
+          <NavBar />
+          <HUD />
+          <main className="content-layer">
+            <Hero />
+            <BaseCamp />
+            <Expeditions />
+            <Inventory />
+            <Crafted />
+            <FieldNotes />
+            <Signal />
+            <Footer />
+          </main>
+        </>
+      )}
+    </>
   );
 }

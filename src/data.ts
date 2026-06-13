@@ -1,3 +1,59 @@
+// =====================================================================
+//  SURVIVAL-THEMED SITE CONFIG
+// =====================================================================
+export const SURVIVOR = {
+  name: "Mayank Thakur",
+  callSign: "Frontend Engineer",
+  classTitle: "Survival Engineer — Class: Frontend",
+  tagline:
+    "I drop into unmapped problem-space and build production React systems that survive real traffic.",
+  bio: "4+ years in the field shipping production React, React Native and Node systems to 5,000+ users across fintech, AI and SaaS. I build component architectures, kill performance regressions, and own features from raw requirements to live deployment. I travel light: type-safe, tested, and fast.",
+  location: "IN · 28.6° N, 77.2° E",
+  resume: "/Mayank_Thakur_.pdf",
+  email: "abhinavthakur958@gmail.com",
+  github: "https://github.com/iammayank18",
+  links: {
+    github: "https://github.com/iammayank18",
+    email: "mailto:abhinavthakur958@gmail.com",
+  },
+};
+
+// Decorative survival "vitals" — purely cosmetic HUD numbers
+export const VITALS = [
+  { label: "HP", key: "experience", value: 92, accent: "amber" as const, note: "4+ yrs in field" },
+  { label: "STAMINA", key: "shipping", value: 88, accent: "forest" as const, note: "ships fast" },
+  { label: "SUPPLY", key: "coverage", value: 85, accent: "ink" as const, note: "85% test cov." },
+];
+
+// Stat block for the Base Camp character card
+export const CHAR_STATS = [
+  { stat: "REACT / NEXT", value: 90 },
+  { stat: "TYPESCRIPT", value: 85 },
+  { stat: "REACT NATIVE", value: 85 },
+  { stat: "NODE / API", value: 85 },
+  { stat: "PERFORMANCE", value: 90 },
+  { stat: "TESTING", value: 90 },
+];
+
+// Map experience -> "expedition regions"
+export const REGION_META: Record<string, { region: string; biome: string; coord: string }> = {
+  "REAL (Reax Technology)": { region: "THE SIGNATURE HIGHLANDS", biome: "Fintech · Web + Mobile", coord: "REGION 03" },
+  Wayverb: { region: "FOUNDER'S BASIN", biome: "SaaS · 0→1", coord: "REGION 02" },
+  "Mindnerves Technologies": { region: "REALTIME LOWLANDS", biome: "Mobile · Realtime", coord: "REGION 01" },
+};
+
+// Rarity tiers for the inventory (skills)
+export type Rarity = "common" | "rare" | "epic" | "legendary";
+export const rarityFor = (level: number): Rarity =>
+  level >= 95 ? "legendary" : level >= 88 ? "epic" : level >= 80 ? "rare" : "common";
+
+export const EDUCATION = {
+  degree: "B.Tech, Computer Science",
+  school: "Self-directed + formal foundation",
+  detail:
+    "Foundations from 2020 onward — built freelance CMS/CRM systems, then moved into professional React and fintech engineering.",
+};
+
 // --- Types ---
 export interface Project {
   id: string;
