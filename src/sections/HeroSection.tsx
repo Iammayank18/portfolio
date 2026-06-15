@@ -117,7 +117,7 @@ export const HeroSection = ({ isBooting }: { isBooting: boolean }) => {
         >
           <a
             ref={downloadRef}
-            href="/Mayank_Thakur_.pdf"
+            href="/Mayank_Thakur.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 sketch-border bg-black text-white font-sketch text-lg hover:bg-gray-800 transition-colors will-change-transform"
           >

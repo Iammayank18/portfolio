@@ -9,7 +9,7 @@ export const SURVIVOR = {
     "I drop into unmapped problem-space and build production React systems that survive real traffic.",
   bio: "3.5+ years of experience building production-grade React, React Native, and Node.js applications across edtech, logistics, real estate, ecommerce, AI, and SaaS. I enjoy turning raw ideas into scalable products, building reusable architectures, improving app performance, and shipping reliable features end-to-end with a strong focus on clean, maintainable code",
   location: "IN · 28.6° N, 77.2° E",
-  resume: "/Mayank_Thakur_.pdf",
+  resume: "/Mayank_Thakur.pdf",
   email: "heymayank2001@gmail.com",
   github: "https://github.com/iammayank18",
   links: {
