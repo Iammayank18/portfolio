@@ -15,6 +15,7 @@ export const SURVIVOR = {
   links: {
     github: "https://github.com/iammayank18",
     email: "mailto:heymayank2001@gmail.com",
+    linkedin: "https://www.linkedin.com/in/iammayank18",
   },
 };
 
