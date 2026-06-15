@@ -27,9 +27,9 @@ export function BaseCamp() {
 
             <div className="mt-10 grid sm:grid-cols-3 gap-4">
               {[
-                ["3.5+", "YEARS IN FIELD"],
-                ["REAL-WORLD", "APPLICATIONS SHIPPED"],
-                ["85%", "TEST COVERAGE"],
+                ["SCALABLE", "SYSTEM DESIGN"],
+                ["PRODUCTION", "ENGINEERING"],
+                ["PERFORMANCE", "OPTIMIZATION"],
               ].map(([big, label]) => (
                 <div key={label} className="panel-soft p-4">
                   <div className="font-display text-3xl font-bold">{big}</div>

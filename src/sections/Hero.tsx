@@ -19,11 +19,17 @@ export function Hero() {
           className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8 sm:mb-12"
         >
           <span className="eyebrow">OPEN-WORLD PORTFOLIO</span>
-          <span className="hidden sm:inline-block h-px w-10" style={{ background: "var(--line)" }} />
+          <span
+            className="hidden sm:inline-block h-px w-10"
+            style={{ background: "var(--line)" }}
+          />
           <span className="hud-label" style={{ color: "var(--ash)" }}>
             BIOME · FINTECH / AI / SAAS
           </span>
-          <span className="hidden sm:inline-block h-px w-10" style={{ background: "var(--line)" }} />
+          <span
+            className="hidden sm:inline-block h-px w-10"
+            style={{ background: "var(--line)" }}
+          />
           <span className="hud-label" style={{ color: "var(--ash)" }}>
             SEED · 2026
           </span>
@@ -47,7 +53,10 @@ export function Hero() {
             <p className="font-display text-lg sm:text-xl font-medium mb-3">
               {SURVIVOR.classTitle}
             </p>
-            <p className="text-[15px] sm:text-base leading-relaxed max-w-xl" style={{ color: "var(--ash)" }}>
+            <p
+              className="text-[15px] sm:text-base leading-relaxed max-w-xl"
+              style={{ color: "var(--ash)" }}
+            >
               {SURVIVOR.tagline}
             </p>
 
@@ -56,7 +65,12 @@ export function Hero() {
                 BEGIN EXPEDITION
                 <span aria-hidden>↓</span>
               </a>
-              <a href={SURVIVOR.resume} target="_blank" rel="noreferrer" className="btn-ghost">
+              <a
+                href={SURVIVOR.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost"
+              >
                 FIELD LOG / CV
               </a>
             </div>
@@ -72,12 +86,14 @@ export function Hero() {
             <div className="panel ticked p-5">
               <div className="flex items-center justify-between mb-4">
                 <span className="hud-label">SURVIVOR DOSSIER</span>
-                <span className="inline-block h-1.5 w-1.5 rounded-full pulse" style={{ background: "var(--amber)" }} />
+                <span
+                  className="inline-block h-1.5 w-1.5 rounded-full pulse"
+                  style={{ background: "var(--amber)" }}
+                />
               </div>
               {[
                 ["STATUS", "AVAILABLE FOR DEPLOYMENT"],
                 ["EXPERIENCE", "3.5+ YEARS IN FIELD"],
-                ["REACHED", "5,000+ USERS"],
                 ["BASE", "INDIA · REMOTE"],
               ].map(([k, v]) => (
                 <div
@@ -85,8 +101,12 @@ export function Hero() {
                   className="flex items-center justify-between py-2 border-t"
                   style={{ borderColor: "var(--line)" }}
                 >
-                  <span className="hud-label" style={{ color: "var(--ash)" }}>{k}</span>
-                  <span className="font-mono text-[11px] text-right max-w-[60%]">{v}</span>
+                  <span className="hud-label" style={{ color: "var(--ash)" }}>
+                    {k}
+                  </span>
+                  <span className="font-mono text-[11px] text-right max-w-[60%]">
+                    {v}
+                  </span>
                 </div>
               ))}
             </div>
@@ -101,7 +121,9 @@ export function Hero() {
         transition={{ delay: 1.4, duration: 1 }}
         className="absolute left-1/2 -translate-x-1/2 bottom-16 flex flex-col items-center gap-2"
       >
-        <span className="hud-label" style={{ color: "var(--ash)" }}>SCROLL TO EXPLORE</span>
+        <span className="hud-label" style={{ color: "var(--ash)" }}>
+          SCROLL TO EXPLORE
+        </span>
         <span className="h-7 w-px float" style={{ background: "var(--ink)" }} />
       </motion.div>
     </section>

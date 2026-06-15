@@ -40,7 +40,7 @@ export const VITALS = [
     key: "coverage",
     value: 85,
     accent: "ink" as const,
-    note: "85% test cov.",
+    note: "90% test cov.",
   },
 ];
 
@@ -312,7 +312,7 @@ export const EXPERIENCE: Experience[] = [
       "Optimized the Bolt CRM Real Estate platform by identifying a 35% performance regression and resolving bundle size and Redux hydration bottlenecks through code splitting, lazy loading, and deferred initialization.",
       "Improved React Native application performance using React DevTools and Flipper, validating fixes and monitoring production stability with Datadog.",
       "Defined API contracts with backend teams, aligning request/response schemas, validation rules, and error handling before implementation to reduce integration defects.",
-      "Maintained 85% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries.",
+      "Maintained 90% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries.",
     ],
     marginNote: "Digital signature platform ✍️",
   },
@@ -397,7 +397,8 @@ export const SKILLS_ROADMAP = [
   {
     year: "2022-2023",
     title: "Scale & Real-time",
-    description: "Handling 5,000+ users with WebSockets and high performance.",
+    description:
+      "Handling multiple users with WebSockets and high performance.",
     skills: [
       {
         name: "TypeScript",
@@ -526,7 +527,7 @@ export const ABOUT_SKILLS = [
     name: "Testing (Jest/Vitest/Playwright)",
     level: 90,
     details:
-      "Achieving 85%+ coverage on critical flows with unit, integration, and E2E tests.",
+      "Achieving 90%+ coverage on critical flows with unit, integration, and E2E tests.",
   },
   {
     name: "State Management",
