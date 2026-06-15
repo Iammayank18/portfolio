@@ -3,8 +3,8 @@
 // =====================================================================
 export const SURVIVOR = {
   name: "Mayank Thakur",
-  callSign: "Frontend Engineer",
-  classTitle: "Survival Engineer — Class: Frontend",
+  callSign: "Software Engineer",
+  classTitle: "Survival Engineer — Class: Software Engineer",
   tagline:
     "I drop into unmapped problem-space and build production React systems that survive real traffic.",
   bio: "3.5+ years of experience building production-grade React, React Native, and Node.js applications across edtech, logistics, real estate, ecommerce, AI, and SaaS. I enjoy turning raw ideas into scalable products, building reusable architectures, improving app performance, and shipping reliable features end-to-end with a strong focus on clean, maintainable code",
@@ -421,7 +421,7 @@ export const SKILLS_ROADMAP = [
   {
     year: "2024-2025",
     title: "Architecture & AI",
-    description: "Leading frontend systems and integrating LLM APIs.",
+    description: "Leading Software systems and integrating LLM APIs.",
     skills: [
       {
         name: "LLM Integration",
@@ -484,7 +484,7 @@ export const ABOUT_SKILLS = [
     name: "JavaScript",
     level: 95,
     details:
-      "Strong core fundamentals, modern ES6+ patterns, and problem-solving across frontend and backend.",
+      "Strong core fundamentals, modern ES6+ patterns, and problem-solving across Software and backend.",
   },
   {
     name: "Python",

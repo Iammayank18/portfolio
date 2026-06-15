@@ -24,7 +24,7 @@ export function Hero() {
             style={{ background: "var(--line)" }}
           />
           <span className="hud-label" style={{ color: "var(--ash)" }}>
-            BIOME · FINTECH / AI / SAAS
+            BIOME · AI / SAAS / APPs
           </span>
           <span
             className="hidden sm:inline-block h-px w-10"

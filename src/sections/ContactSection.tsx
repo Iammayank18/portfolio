@@ -6,7 +6,7 @@ export const ContactSection = () => (
       {/* Availability status */}
       <div className="inline-flex items-center gap-2 font-mono text-sm text-gray-600 border border-gray-200 rounded-full px-4 py-1.5 mb-8 bg-white/60">
         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-        Available for frontend roles
+        Available for Software roles
       </div>
 
       <h2 className="text-3xl md:text-6xl font-sketch mb-4 md:mb-8">

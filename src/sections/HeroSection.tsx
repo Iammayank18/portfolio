@@ -23,7 +23,7 @@ const ROLES = [
   "React & TypeScript",
   "UI / UX Engineering",
   "Node · APIs",
-  "Creative Frontend",
+  "Creative Software",
   "Product Builder",
 ];
 

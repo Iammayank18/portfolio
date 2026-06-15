@@ -43,7 +43,7 @@ export function Signal() {
               style={{ color: "var(--ash)" }}
             >
               Building something that needs to survive real traffic? I'm
-              available for frontend and full-stack work. Send a signal and I'll
+              available for Software and full-stack work. Send a signal and I'll
               respond.
             </p>
 

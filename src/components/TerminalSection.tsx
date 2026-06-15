@@ -108,7 +108,7 @@ export const TerminalSection = () => {
         break;
       case "about":
         response =
-          "Senior Frontend Engineer focusing on React & Next.js. I bridge the gap between design vision and technical implementation with 'Logic and Empathy'. Built high-traffic platforms (10k+ users) and AI-powered tools.";
+          "Senior Software Engineer focusing on React & Next.js. I bridge the gap between design vision and technical implementation with 'Logic and Empathy'. Built high-traffic platforms (10k+ users) and AI-powered tools.";
         break;
       case "ls":
         response = PROJECTS.map((p) => p.id).join("  ");

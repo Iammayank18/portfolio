@@ -24,9 +24,9 @@ export const AboutSection = ({ isBooting }: { isBooting: boolean }) => {
               <span className="bg-yellow-100 px-1">
                 curiosity for how things work
               </span>
-              . Before I was writing React components, I was sketching interfaces
-              on the back of my notebooks. I've always believed that the best
-              products are built at the intersection of{" "}
+              . Before I was writing React components, I was sketching
+              interfaces on the back of my notebooks. I've always believed that
+              the best products are built at the intersection of{" "}
               <span className="italic underline decoration-blue-400 decoration-2 underline-offset-4">
                 logic and empathy
               </span>
@@ -34,11 +34,11 @@ export const AboutSection = ({ isBooting }: { isBooting: boolean }) => {
             </p>
 
             <p>
-              As a frontend engineer, I don't just "implement designs." I think
-              about the <span className="font-bold">micro-interactions</span>, the
-              performance edge cases, and the emotional response of the user.
-              Whether it's building a complex inspection tool or a simple booking
-              flow, my goal is always the same:
+              As a Software engineer, I don't just "implement designs." I think
+              about the <span className="font-bold">micro-interactions</span>,
+              the performance edge cases, and the emotional response of the
+              user. Whether it's building a complex inspection tool or a simple
+              booking flow, my goal is always the same:
               <span className="sketch-underline">Make it feel effortless.</span>
             </p>
 
