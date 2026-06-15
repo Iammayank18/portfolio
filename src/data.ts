@@ -7,7 +7,7 @@ export const SURVIVOR = {
   classTitle: "Survival Engineer — Class: Frontend",
   tagline:
     "I drop into unmapped problem-space and build production React systems that survive real traffic.",
-  bio: "3.5+ years in the field shipping production React, React Native and Node systems to 5,000+ users across fintech, AI and SaaS. I build component architectures, kill performance regressions, and own features from raw requirements to live deployment. I travel light: type-safe, tested, and fast.",
+  bio: "3.5+ years of experience building production-grade React, React Native, and Node.js applications across edtech, logistics, real estate, ecommerce, AI, and SaaS. I enjoy turning raw ideas into scalable products, building reusable architectures, improving app performance, and shipping reliable features end-to-end with a strong focus on clean, maintainable code",
   location: "IN · 28.6° N, 77.2° E",
   resume: "/Mayank_Thakur_.pdf",
   email: "heymayank2001@gmail.com",
@@ -177,8 +177,8 @@ export const PROJECTS: Project[] = [
     solution:
       "A seamless mobile platform where users book deliveries in seconds by entering pickup/drop locations, selecting vehicles (bike/auto/truck), and confirming requests. The system instantly assigns the nearest driver with real-time GPS tracking, optimized routing, verified drivers, and transparent pricing — hassle-free logistics for everyone.",
     tech: [
-      "JavaScript",
-      "Mobile App",
+      "React Native",
+      "Typescript",
       "GPS Tracking",
       "Real-time Navigation",
       "Cloud Backend",
@@ -468,18 +468,6 @@ export const ABOUT_SKILLS = [
       "Expert in building scalable web apps with React.js, Next.js (App Router), and Redux/Zustand.",
   },
   {
-    name: "JavaScript",
-    level: 95,
-    details:
-      "Strong core fundamentals, modern ES6+ patterns, and problem-solving across frontend and backend.",
-  },
-  {
-    name: "Python",
-    level: 60,
-    details:
-      "Building basic REST APIs with FastAPI plus scripts for automation and data handling, currently leveling up from fundamentals to production-ready patterns.",
-  },
-  {
     name: "React Native",
     level: 85,
     details:
@@ -492,10 +480,35 @@ export const ABOUT_SKILLS = [
       "Architecting type-safe codebases for better maintainability and developer experience.",
   },
   {
+    name: "JavaScript",
+    level: 95,
+    details:
+      "Strong core fundamentals, modern ES6+ patterns, and problem-solving across frontend and backend.",
+  },
+  {
+    name: "Python",
+    level: 60,
+    details:
+      "Building basic REST APIs with FastAPI plus scripts for automation and data handling, currently leveling up from fundamentals to production-ready patterns.",
+  },
+
+  {
     name: "Node.js",
     level: 85,
     details:
       "Building scalable backend services, RESTful APIs, and real-time WebSocket layers.",
+  },
+  {
+    name: "Express.js",
+    level: 85,
+    details:
+      "Designing secure, high‑throughput REST APIs with structured routing, middleware, and JWT-based auth.",
+  },
+  {
+    name: "Nest.js",
+    level: 85,
+    details:
+      "Architecting modular, type-safe backends with dependency injection, guards, interceptors, and WebSocket gateways.",
   },
   {
     name: "MongoDB",

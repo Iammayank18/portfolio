@@ -28,12 +28,15 @@ export function BaseCamp() {
             <div className="mt-10 grid sm:grid-cols-3 gap-4">
               {[
                 ["3.5+", "YEARS IN FIELD"],
-                ["5K+", "USERS REACHED"],
+                ["REAL-WORLD", "APPLICATIONS SHIPPED"],
                 ["85%", "TEST COVERAGE"],
               ].map(([big, label]) => (
                 <div key={label} className="panel-soft p-4">
                   <div className="font-display text-3xl font-bold">{big}</div>
-                  <div className="hud-label mt-1" style={{ color: "var(--ash)" }}>
+                  <div
+                    className="hud-label mt-1"
+                    style={{ color: "var(--ash)" }}
+                  >
                     {label}
                   </div>
                 </div>
@@ -52,7 +55,10 @@ export function BaseCamp() {
             <div className="panel ticked p-6">
               <div className="flex items-center justify-between mb-5">
                 <span className="hud-label">CHARACTER SHEET</span>
-                <span className="font-mono text-[11px]" style={{ color: "var(--amber)" }}>
+                <span
+                  className="font-mono text-[11px]"
+                  style={{ color: "var(--amber)" }}
+                >
                   LV.26
                 </span>
               </div>
@@ -62,25 +68,40 @@ export function BaseCamp() {
                   <div key={s.stat}>
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="hud-label">{s.stat}</span>
-                      <span className="font-mono text-[11px] tabular-nums" style={{ color: "var(--ash)" }}>
+                      <span
+                        className="font-mono text-[11px] tabular-nums"
+                        style={{ color: "var(--ash)" }}
+                      >
                         {s.value}
                       </span>
                     </div>
-                    <div className="h-1.5 w-full" style={{ background: "var(--line)" }}>
+                    <div
+                      className="h-1.5 w-full"
+                      style={{ background: "var(--line)" }}
+                    >
                       <motion.div
                         className="h-full"
-                        style={{ background: i % 2 ? "var(--forest)" : "var(--ink)" }}
+                        style={{
+                          background: i % 2 ? "var(--forest)" : "var(--ink)",
+                        }}
                         initial={{ width: 0 }}
                         whileInView={{ width: `${s.value}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.9, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{
+                          duration: 0.9,
+                          delay: 0.15 + i * 0.08,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
                       />
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 pt-5 border-t flex items-center justify-between" style={{ borderColor: "var(--line)" }}>
+              <div
+                className="mt-6 pt-5 border-t flex items-center justify-between"
+                style={{ borderColor: "var(--line)" }}
+              >
                 <span className="hud-label" style={{ color: "var(--ash)" }}>
                   {SURVIVOR.location}
                 </span>
@@ -88,7 +109,10 @@ export function BaseCamp() {
                   className="inline-flex items-center gap-1.5 hud-label"
                   style={{ color: "var(--forest)" }}
                 >
-                  <span className="h-1.5 w-1.5 rounded-full pulse" style={{ background: "var(--forest)" }} />
+                  <span
+                    className="h-1.5 w-1.5 rounded-full pulse"
+                    style={{ background: "var(--forest)" }}
+                  />
                   ACTIVE
                 </span>
               </div>
