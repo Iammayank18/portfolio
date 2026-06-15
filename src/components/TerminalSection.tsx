@@ -3,7 +3,9 @@ import { PROJECTS, ABOUT_SKILLS, EXPERIENCE } from "../data";
 
 export const TerminalSection = () => {
   const [input, setInput] = useState("");
-  const [history, setHistory] = useState<{ type: "cmd" | "resp"; text: string }[]>([
+  const [history, setHistory] = useState<
+    { type: "cmd" | "resp"; text: string }[]
+  >([
     { type: "resp", text: "MAYANK_OS v2.5.0 (Sketchbook Edition)" },
     { type: "resp", text: 'Type "help" to see available commands.' },
   ]);
@@ -48,11 +50,18 @@ export const TerminalSection = () => {
 
     const parts = trimmed.split(" ");
     if (parts.length === 1) {
-      const match = COMMANDS.find((c) => c.startsWith(parts[0]) && c !== parts[0]);
+      const match = COMMANDS.find(
+        (c) => c.startsWith(parts[0]) && c !== parts[0],
+      );
       setSuggestion(match || "");
-    } else if (parts.length === 2 && (parts[0] === "cat" || parts[0] === "ls")) {
-       const match = PROJECT_IDS.find((id) => id.startsWith(parts[1]) && id !== parts[1]);
-       setSuggestion(match ? `${parts[0]} ${match}` : "");
+    } else if (
+      parts.length === 2 &&
+      (parts[0] === "cat" || parts[0] === "ls")
+    ) {
+      const match = PROJECT_IDS.find(
+        (id) => id.startsWith(parts[1]) && id !== parts[1],
+      );
+      setSuggestion(match ? `${parts[0]} ${match}` : "");
     } else {
       setSuggestion("");
     }
@@ -105,7 +114,9 @@ export const TerminalSection = () => {
         response = PROJECTS.map((p) => p.id).join("  ");
         break;
       case "skills":
-        response = "Main Toolkit:\n" + ABOUT_SKILLS.map(s => `  • ${s.name}`).join("\n");
+        response =
+          "Main Toolkit:\n" +
+          ABOUT_SKILLS.map((s) => `  • ${s.name}`).join("\n");
         break;
       case "tree":
         response = [
@@ -122,7 +133,7 @@ export const TerminalSection = () => {
         response = [
           "LinkedIn: linkedin.com/in/iammayank18",
           "GitHub: github.com/iammayank18",
-          "Email: abhinavthakur958@gmail.com",
+          "Email: heymayank2001@gmail.com",
         ].join("\n");
         break;
       case "whoami":
@@ -191,7 +202,9 @@ export const TerminalSection = () => {
           <div className="w-3 h-3 rounded-full border border-black/20 bg-[#ffbd2e]" />
           <div className="w-3 h-3 rounded-full border border-black/20 bg-[#27c93f]" />
         </div>
-        <div className="text-gray-500 text-xs font-sketch">mayank@sketchbook — zsh</div>
+        <div className="text-gray-500 text-xs font-sketch">
+          mayank@sketchbook — zsh
+        </div>
         <div className="w-12" />
       </div>
 
@@ -217,13 +230,17 @@ export const TerminalSection = () => {
           {history.map((line, i) => (
             <div
               key={i}
-              className={line.type === "cmd" ? "text-white" : "text-gray-400 whitespace-pre-wrap"}
+              className={
+                line.type === "cmd"
+                  ? "text-white"
+                  : "text-gray-400 whitespace-pre-wrap"
+              }
             >
               {line.type === "cmd" ? (
                 <div className="flex items-start gap-2">
-                   <span className="text-green-400 select-none">➜</span>
-                   <span className="text-blue-400 select-none">~</span>
-                   <span>{line.text}</span>
+                  <span className="text-green-400 select-none">➜</span>
+                  <span className="text-blue-400 select-none">~</span>
+                  <span>{line.text}</span>
                 </div>
               ) : (
                 <div className="pl-6">{line.text}</div>
@@ -236,7 +253,10 @@ export const TerminalSection = () => {
         </div>
 
         {/* Input Form */}
-        <form onSubmit={handleCommand} className="relative flex items-start gap-2">
+        <form
+          onSubmit={handleCommand}
+          className="relative flex items-start gap-2"
+        >
           <span className="text-green-400 select-none shrink-0">➜</span>
           <span className="text-blue-400 select-none shrink-0">~</span>
           <div className="relative flex-1">
@@ -256,13 +276,14 @@ export const TerminalSection = () => {
               disabled={isTyping}
             />
             {!isTyping && (
-                <span className="absolute h-4 w-2 bg-green-400 animate-cursor-blink" 
-                      style={{ 
-                          left: `${input.length * 8.4}px`, 
-                          top: '2px',
-                          display: 'inline-block' 
-                      }}>
-                </span>
+              <span
+                className="absolute h-4 w-2 bg-green-400 animate-cursor-blink"
+                style={{
+                  left: `${input.length * 8.4}px`,
+                  top: "2px",
+                  display: "inline-block",
+                }}
+              ></span>
             )}
           </div>
         </form>

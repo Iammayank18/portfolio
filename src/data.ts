@@ -10,11 +10,11 @@ export const SURVIVOR = {
   bio: "3.5+ years in the field shipping production React, React Native and Node systems to 5,000+ users across fintech, AI and SaaS. I build component architectures, kill performance regressions, and own features from raw requirements to live deployment. I travel light: type-safe, tested, and fast.",
   location: "IN · 28.6° N, 77.2° E",
   resume: "/Mayank_Thakur_.pdf",
-  email: "abhinavthakur958@gmail.com",
+  email: "heymayank2001@gmail.com",
   github: "https://github.com/iammayank18",
   links: {
     github: "https://github.com/iammayank18",
-    email: "mailto:abhinavthakur958@gmail.com",
+    email: "mailto:heymayank2001@gmail.com",
   },
 };
 
@@ -102,7 +102,7 @@ export interface Project {
   solution: string;
   tech: string[];
   link?: string;
-  category: "SaaS" | "Tool" | "Experiment";
+  category: "SaaS" | "Tool" | "Experiment" | "App";
   notes?: string[];
 }
 
@@ -166,6 +166,32 @@ export const IDEAS: Idea[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: "shipitapp",
+    title: "ShipIt",
+    description:
+      "Smart logistics and delivery platform — instant booking with real-time tracking.",
+    problem:
+      "Logistics and delivery is complex, and individuals/businesses struggle to find fast, cost-effective solutions for moving goods within cities and across regions.",
+    solution:
+      "A seamless mobile platform where users book deliveries in seconds by entering pickup/drop locations, selecting vehicles (bike/auto/truck), and confirming requests. The system instantly assigns the nearest driver with real-time GPS tracking, optimized routing, verified drivers, and transparent pricing — hassle-free logistics for everyone.",
+    tech: [
+      "JavaScript",
+      "Mobile App",
+      "GPS Tracking",
+      "Real-time Navigation",
+      "Cloud Backend",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.shipitlogistics",
+    category: "App",
+    notes: [
+      "Instant booking with quick driver assignment",
+      "Real-time GPS tracking",
+      "Multiple vehicle options (bike, auto, truck)",
+      "Affordable and transparent pricing",
+      "Safe and secure delivery handling",
+    ],
+  },
   {
     id: "unused",
     title: "Unused",
@@ -445,6 +471,12 @@ export const ABOUT_SKILLS = [
     level: 95,
     details:
       "Strong core fundamentals, modern ES6+ patterns, and problem-solving across frontend and backend.",
+  },
+  {
+    name: "Python",
+    level: 60,
+    details:
+      "Building basic REST APIs with FastAPI plus scripts for automation and data handling, currently leveling up from fundamentals to production-ready patterns.",
   },
   {
     name: "React Native",
