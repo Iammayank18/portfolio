@@ -7,8 +7,8 @@ export const SURVIVOR = {
   classTitle: "Survival Engineer — Class: Software Engineer",
   tagline:
     "I drop into unmapped problem-space and build production React systems that survive real traffic.",
-  bio: "3.5+ years of experience building production-grade React, React Native, and Node.js applications across edtech, logistics, real estate, ecommerce, AI, and SaaS. I enjoy turning raw ideas into scalable products, building reusable architectures, improving app performance, and shipping reliable features end-to-end with a strong focus on clean, maintainable code",
-  location: "IN · 28.6° N, 77.2° E",
+  bio: "3.8+ years of experience building production web and mobile applications, scalable backend systems, and developer tools. I own features end-to-end — from architecture and implementation to testing and deployment — with a strong focus on performance optimization, reusable system design, and developer experience. I've shipped AI-powered products, open-source tools, and multi-tenant SaaS applications used in production.",
+  location: "IN · 26.9° N, 75.8° E",
   resume: "/Mayank_Thakur.pdf",
   email: "heymayank2001@gmail.com",
   github: "https://github.com/iammayank18",
@@ -26,7 +26,7 @@ export const VITALS = [
     key: "experience",
     value: 92,
     accent: "amber" as const,
-    note: "3.5+ yrs in field",
+    note: "3.8+ yrs in field",
   },
   {
     label: "STAMINA",
@@ -40,7 +40,7 @@ export const VITALS = [
     key: "coverage",
     value: 85,
     accent: "ink" as const,
-    note: "90% test cov.",
+    note: "95% test cov.",
   },
 ];
 
@@ -59,9 +59,9 @@ export const REGION_META: Record<
   string,
   { region: string; biome: string; coord: string }
 > = {
-  "REAL (Reax Technology)": {
-    region: "THE SIGNATURE HIGHLANDS",
-    biome: "Fintech · Web + Mobile",
+  "REAL (NASDAQ: REAX)": {
+    region: "THE SIGNAL HIGHLANDS",
+    biome: "Real Estate · AI · Web + Mobile",
     coord: "REGION 03",
   },
   Wayverb: {
@@ -88,10 +88,10 @@ export const rarityFor = (level: number): Rarity =>
         : "common";
 
 export const EDUCATION = {
-  degree: "B.Tech, Computer Science",
-  school: "Self-directed + formal foundation",
+  degree: "B.Tech, Computer Science Engineering",
+  school: "Arya College of Engineering and Research Center, Jaipur",
   detail:
-    "Foundations from 2020 onward — built freelance CMS/CRM systems, then moved into professional React and fintech engineering.",
+    "2019 – 2023 — built freelance CMS/CRM systems alongside the degree, then moved into professional React and product engineering.",
 };
 
 // --- Types ---
@@ -223,7 +223,7 @@ export const PROJECTS: Project[] = [
     link: "https://wayverb.com",
     category: "SaaS",
     notes: [
-      "2 schools live & generating revenue",
+      "3 schools · ~2,000 users live",
       "Teacher + parent mobile apps",
       "0→1 in 4 months",
     ],
@@ -231,18 +231,18 @@ export const PROJECTS: Project[] = [
   {
     id: "echo-ai",
     title: "Echo – AI Voice",
-    description: "AI Voice-to-Intelligence App for macOS.",
+    description: "LLM-powered real-time speech transcription for desktop.",
     problem:
-      "Converting speech input into structured, context-aware outputs from audio.",
+      "Turning live speech into text and structured, context-aware outputs with minimal delay.",
     solution:
-      "Orchestrates across OpenAI, Anthropic, and GROQ APIs with secure key management inside a clean Electron.js shell.",
-    tech: ["Electron.js", "JavaScript", "OpenAI", "Anthropic", "GROQ"],
+      "A desktop app built with Electron, React, and Node.js that streams speech transcription in real time via OpenAI and Groq APIs — an asynchronous audio pipeline with streaming responses delivering sub-second latency from speech to UI.",
+    tech: ["Electron.js", "React", "Node.js", "OpenAI", "Groq"],
     link: "https://github.com/iammayank18/echo",
     category: "Tool",
     notes: [
-      "macOS native experience",
-      "Multi-LLM orchestration",
-      "Secure key management",
+      "Real-time streaming transcription",
+      "Sub-second speech→UI latency",
+      "Async audio pipeline",
     ],
   },
   {
@@ -252,8 +252,8 @@ export const PROJECTS: Project[] = [
     problem:
       "Most focus tools require manual logging; real patterns stay hidden.",
     solution:
-      "Automatic URL-based activity logging, Pomodoro timers, and a GitHub-style heatmap dashboard. Zero dependencies, pure JS.",
-    tech: ["Vanilla JS", "CSS3", "Chrome API V3"],
+      "Automatic URL-based activity logging, Pomodoro timers, and a custom SVG activity heatmap — built in TypeScript using browser APIs directly, zero dependencies.",
+    tech: ["TypeScript", "CSS3", "Chrome API V3"],
     link: "https://github.com/iammayank18/focusloop",
     category: "Tool",
     notes: [
@@ -269,14 +269,14 @@ export const PROJECTS: Project[] = [
     problem:
       "Express is great but slow, and every new project needs the same auth, docs, and database boilerplate wired up from scratch.",
     solution:
-      "A standalone Node.js framework (not built on Express) with auto route loading, built-in JWT auth, bcrypt, auto-generated Swagger docs from JSDoc, and MongoDB/SQLite adapters — batteries included, zero config.",
-    tech: ["JavaScript", "TypeScript", "Node.js", "Swagger", "JWT"],
+      "A TypeScript-first Node.js framework built from scratch — custom radix trie router, middleware pipeline, request parsing, and automatic Swagger generation. v2 removed the Express dependency entirely, hitting ~89k requests/sec (~4× Express), published to npm.",
+    tech: ["TypeScript", "Node.js", "Swagger", "JWT"],
     link: "https://github.com/iammayank18/mimi",
     category: "Tool",
     notes: [
-      "4× faster than Express",
-      "Auto route loading",
-      "Built-in JWT + Swagger",
+      "~89k req/sec (~4× Express)",
+      "Custom radix trie router",
+      "Auto Swagger generation",
     ],
   },
 ];
@@ -290,11 +290,11 @@ export const LAB_EXPERIMENTS = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "REAL (Reax Technology)",
+    company: "REAL (NASDAQ: REAX)",
     role: "Software Engineer",
     period: "Feb 2024 – Mar 2026",
     description:
-      "Owned the digital signature platform across web (React.js/Next.js) and mobile (React Native), designing component architecture, state management, and API integrations from requirements through production delivery.",
+      "Built agent-facing product across web (React.js/Next.js) and mobile (React Native) — from the onboarding flow to AI-assisted workflows — owning features from architecture through production delivery.",
     tech: [
       "React.js",
       "Next.js",
@@ -304,30 +304,32 @@ export const EXPERIENCE: Experience[] = [
       "TanStack Query",
       "Tailwind CSS",
       "Jest",
+      "Vitest",
       "Playwright",
-      "Datadog",
+      "Detox",
     ],
     achievements: [
-      "Designed a shared React.js + React Native component library in TypeScript — single source of truth for UI patterns across web and mobile teams, with composable APIs and WCAG/ARIA compliance.",
-      "Optimized the Bolt CRM Real Estate platform by identifying a 35% performance regression and resolving bundle size and Redux hydration bottlenecks through code splitting, lazy loading, and deferred initialization.",
-      "Improved React Native application performance using React DevTools and Flipper, validating fixes and monitoring production stability with Datadog.",
-      "Defined API contracts with backend teams, aligning request/response schemas, validation rules, and error handling before implementation to reduce integration defects.",
-      "Maintained 90% test coverage across critical workflows and reviewed pull requests to enforce type safety, predictable state management, and clean component boundaries.",
+      "Redesigned the agent onboarding flow across web and mobile applications, increasing onboarding completion by 40%.",
+      "Built production chat and voice experiences for LEO AI by integrating REST and streaming APIs, enabling real-time AI-assisted workflows for real estate agents.",
+      "Designed and maintained a shared React/TypeScript component library of 100+ reusable components adopted across web and mobile.",
+      "Converted 50+ Figma designs into responsive, production-ready interfaces while maintaining consistency across platforms.",
+      "Achieved 95% test coverage across critical user journeys using Playwright, Jest, Vitest, and Detox.",
+      "Reduced page load time from ~5.0s to 1.78s (64%) through route-level code splitting, lazy loading, rendering optimizations, and API request deduplication.",
     ],
-    marginNote: "Digital signature platform ✍️",
+    marginNote: "LEO AI + agent platform 🤖",
   },
   {
     company: "Wayverb",
     role: "Founder & Software Engineer",
     period: "Apr 2023 – Jan 2024",
     description:
-      "Built a school management SaaS using React.js, React Native, Node.js, NestJS, and MongoDB, supporting administrators, teachers, parents, and students through a shared backend architecture.",
-    tech: ["React", "React Native", "Node.js", "NestJS", "MongoDB"],
+      "Built and launched a multi-tenant school management SaaS using React, Next.js, React Native, NestJS, MongoDB, and MySQL — supporting administrators, teachers, students, and parents across 3 schools and ~2,000 users.",
+    tech: ["React", "Next.js", "React Native", "NestJS", "MongoDB", "MySQL"],
     achievements: [
       "Architected a single API layer consumed by web and mobile applications, eliminating duplicated business logic and simplifying feature development.",
-      "Implemented JWT authentication, refresh-token rotation, and RBAC across multiple user roles, enforcing authorization consistently at both API and UI layers.",
-      "Revised the database schema twice after conducting customer discovery with schools, aligning the product data model with real operational workflows.",
-      "Managed AWS infrastructure, Docker deployments, GitHub Actions CI/CD pipelines, and production debugging independently.",
+      "Designed secure authentication and authorization using JWT, refresh-token rotation, and role-based access control (RBAC), enforced consistently at both API and UI layers.",
+      "Managed production infrastructure independently using Docker, GitHub Actions, AWS EC2, and S3 — building automated deployment pipelines and maintaining production reliability.",
+      "Worked directly with school administrators to gather requirements, validate product ideas, and translate operational workflows into shipped features.",
     ],
     marginNote: "0→1 ownership 🛠️",
   },
@@ -336,11 +338,18 @@ export const EXPERIENCE: Experience[] = [
     role: "Software Engineer Intern",
     period: "Jul 2022 – Mar 2023",
     description:
-      "Built and shipped React Native features for a real-time job tracking platform used by thousands of active users.",
-    tech: ["React Native", "React", "TanStack Query", "TypeScript", "Node.js"],
+      "Built and shipped React Native and Next.js features for a real-time job tracking platform used by thousands of active users.",
+    tech: [
+      "React Native",
+      "React",
+      "Next.js",
+      "TanStack Query",
+      "TypeScript",
+      "Node.js",
+    ],
     achievements: [
-      "Reduced redundant API requests by ~25% by migrating data fetching to TanStack Query and implementing cache-first patterns with request deduplication.",
-      "Built and shipped React Native features used by thousands of active users.",
+      "Reduced redundant API requests by ~25% through cache-first data fetching with TanStack Query and request deduplication, improving responsiveness for thousands of active users.",
+      "Developed reusable UI components and integrated backend APIs for Publir, a digital monetization platform.",
       "Collaborated through code reviews, QA cycles, and automated CI pipelines to deliver production-ready functionality.",
     ],
     marginNote: "Real-time specialist ⚡",
@@ -431,7 +440,7 @@ export const SKILLS_ROADMAP = [
       {
         name: "Testing (Playwright)",
         level: 95,
-        details: "90%+ test coverage on complex flows.",
+        details: "95% test coverage on complex flows.",
       },
       {
         name: "Privacy-first Arch",
@@ -472,7 +481,7 @@ export const ABOUT_SKILLS = [
     name: "React Native",
     level: 85,
     details:
-      "Developing high-performance cross-platform mobile applications with native bridges.",
+      "Developing high-performance cross-platform mobile applications with Expo and native bridges.",
   },
   {
     name: "TypeScript",
@@ -509,7 +518,7 @@ export const ABOUT_SKILLS = [
     name: "Nest.js",
     level: 85,
     details:
-      "Architecting modular, type-safe backends with dependency injection, guards, interceptors, and WebSocket gateways.",
+      "Architecting modular, type-safe backends with dependency injection, guards, interceptors, GraphQL, and Prisma.",
   },
   {
     name: "MongoDB",
@@ -527,7 +536,7 @@ export const ABOUT_SKILLS = [
     name: "Testing (Jest/Vitest/Playwright)",
     level: 90,
     details:
-      "Achieving 90%+ coverage on critical flows with unit, integration, and E2E tests.",
+      "Achieving 95% coverage on critical flows with unit, integration, and E2E tests.",
   },
   {
     name: "State Management",

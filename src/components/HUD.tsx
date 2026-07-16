@@ -1,10 +1,23 @@
 import { VITALS } from "../data";
 import { useScrollProgress } from "../hooks/useScrollProgress";
 
+// same ramp as the 3D world / page theme
+const nightProgress = (p: number) => {
+  const x = Math.min(Math.max((p - 0.45) / (0.88 - 0.45), 0), 1);
+  return x * x * (3 - 2 * x);
+};
+
 /** Always-on survival HUD overlay: corners, vitals, coordinates, travel meter. */
 export function HUD() {
   const p = useScrollProgress();
   const deg = Math.round(p * 360);
+
+  // in-world clock: 07:00 at the top of the page → 23:40 at the signal fire
+  const night = nightProgress(p);
+  const minutes = Math.round(420 + p * 1000);
+  const hh = String(Math.floor(minutes / 60)).padStart(2, "0");
+  const mm = String(minutes % 60).padStart(2, "0");
+  const phase = night < 0.1 ? "DAY" : night < 0.85 ? "DUSK" : "NIGHT";
 
   return (
     <div className="hud-frame">
@@ -30,10 +43,13 @@ export function HUD() {
       {/* coordinates / compass — bottom right */}
       <div className="absolute bottom-7 right-7 hidden sm:flex flex-col items-end gap-1.5">
         <span className="hud-label" style={{ color: "var(--ash)" }}>
+          {hh}:{mm} · {phase}
+        </span>
+        <span className="hud-label" style={{ color: "var(--ash)" }}>
           BEARING {String(deg).padStart(3, "0")}°
         </span>
         <span className="hud-label" style={{ color: "var(--ash)" }}>
-          28.6°N · 77.2°E
+          26.9°N · 75.8°E
         </span>
         <div className="flex items-center gap-1.5 mt-1">
           <span

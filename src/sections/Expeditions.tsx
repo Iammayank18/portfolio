@@ -93,49 +93,52 @@ export function Expeditions() {
                     <span className="h-2.5 w-2.5 rotate-45" style={{ background: "var(--amber)" }} />
                   </span>
 
-                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-2">
-                    <span className="font-mono text-[11px]" style={{ color: "var(--amber)" }}>
-                      {meta.coord}
-                    </span>
-                    <span className="hud-label" style={{ color: "var(--ash)" }}>
-                      {exp.period}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">
-                    {meta.region}
-                  </h3>
-                  <p className="mt-1 font-mono text-xs" style={{ color: "var(--ash)" }}>
-                    {exp.role} · {exp.company}
-                    {meta.biome ? ` · ${meta.biome}` : ""}
-                  </p>
-
-                  <p className="mt-4 max-w-2xl text-[15px] leading-relaxed">
-                    {exp.description}
-                  </p>
-
-                  <ul className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3 max-w-3xl">
-                    {exp.achievements.map((a, i) => (
-                      <li key={i} className="flex gap-2.5 text-sm leading-relaxed">
-                        <span
-                          className="mt-2 h-1 w-1 shrink-0 rotate-45"
-                          style={{ background: "var(--forest)" }}
-                        />
-                        <span style={{ color: "var(--ash)" }}>{a}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {exp.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="font-mono text-[10px] tracking-wide px-2 py-1 border"
-                        style={{ borderColor: "var(--line)", color: "var(--ash)" }}
-                      >
-                        {t}
+                  {/* panel-soft keeps the log readable over the 3D world */}
+                  <div className="panel-soft ticked max-w-3xl p-5 sm:p-7">
+                    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-2">
+                      <span className="font-mono text-[11px]" style={{ color: "var(--amber)" }}>
+                        {meta.coord}
                       </span>
-                    ))}
+                      <span className="hud-label" style={{ color: "var(--ash)" }}>
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">
+                      {meta.region}
+                    </h3>
+                    <p className="mt-1 font-mono text-xs" style={{ color: "var(--ash)" }}>
+                      {exp.role} · {exp.company}
+                      {meta.biome ? ` · ${meta.biome}` : ""}
+                    </p>
+
+                    <p className="mt-4 max-w-2xl text-[15px] leading-relaxed">
+                      {exp.description}
+                    </p>
+
+                    <ul className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                      {exp.achievements.map((a, i) => (
+                        <li key={i} className="flex gap-2.5 text-sm leading-relaxed">
+                          <span
+                            className="mt-2 h-1 w-1 shrink-0 rotate-45"
+                            style={{ background: "var(--forest)" }}
+                          />
+                          <span style={{ color: "var(--ash)" }}>{a}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {exp.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="font-mono text-[10px] tracking-wide px-2 py-1 border"
+                          style={{ borderColor: "var(--line)", color: "var(--ash)" }}
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               );

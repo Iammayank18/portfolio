@@ -13,7 +13,7 @@ const SketchScene = lazy(() =>
 );
 
 const STATS = [
-  { value: "3.5+", label: "Years" },
+  { value: "3.8+", label: "Years" },
   { value: "30K+", label: "Users" },
   { value: "4", label: "Products" },
 ];

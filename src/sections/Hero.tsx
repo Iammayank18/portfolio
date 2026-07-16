@@ -93,7 +93,7 @@ export function Hero() {
               </div>
               {[
                 ["STATUS", "AVAILABLE FOR DEPLOYMENT"],
-                ["EXPERIENCE", "3.5+ YEARS IN FIELD"],
+                ["EXPERIENCE", "3.8+ YEARS IN FIELD"],
                 ["BASE", "INDIA · REMOTE"],
               ].map(([k, v]) => (
                 <div

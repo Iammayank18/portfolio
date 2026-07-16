@@ -17,7 +17,7 @@ npm run clean        # Remove dist/
 
 ## Architecture
 
-This is a **single-page portfolio** with an **open-world-survival** theme on a **white / monochrome** palette (amber = campfire, forest green = wilderness as the only accents). No routing, no state-management library. `src/App.tsx` is a thin shell; UI is split into `src/sections/` and `src/components/`.
+This is a **single-page portfolio** with an **open-world-survival** theme. The UI chrome is **white / monochrome** by day (amber = campfire, forest green = wilderness accents) over a **colorful low-poly diorama world** (bruno-simon.com-inspired), and the whole page falls into a dark night theme as you scroll (driven by the `--night` CSS variable). No routing, no state-management library. `src/App.tsx` is a thin shell; UI is split into `src/sections/` and `src/components/`.
 
 **Tech stack:**
 - React 19 + TypeScript, built with Vite 6
@@ -27,7 +27,7 @@ This is a **single-page portfolio** with an **open-world-survival** theme on a *
 - **GSAP + ScrollTrigger** for imperative scroll-driven animations
 - **Lenis** for smooth momentum scrolling (driven by GSAP's ticker)
 
-**The 3D world** lives in `src/three/world.ts` (`SurvivalWorld` class — low-poly white terrain, instanced trees/rocks, flickering campfire, drifting motes, fog). It's mounted full-screen behind the page by `src/components/WorldCanvas.tsx`, which feeds it pointer + scroll so the camera dollies through the world as you scroll. Fails silently if WebGL is unavailable.
+**The 3D world** lives in `src/three/world.ts` (`SurvivalWorld` class — low-poly diorama: altitude-colored terrain (meadow→rock→snow peaks) with a baked dirt trail, instanced green pines/rocks, campfire + tent camp, gradient sky dome, sun, drifting clouds, soft sun shadows). A **scroll-driven day→night cycle** dims the lights, sinks the sun, and brings out stars, aurora curtains, fireflies, and shooting stars; a low-poly **trekker character walks the trail to camp** as the page scrolls, arriving at the fire by nightfall. Mounted full-screen behind the page by `src/components/WorldCanvas.tsx`, which feeds it pointer + scroll (and sets the `--night` CSS variable that flips the page theme). Fails silently if WebGL is unavailable.
 
 **Sections** (`src/sections/`), each themed: `Hero` (title screen), `BaseCamp` (about + character sheet), `Expeditions` (experience as a GSAP-drawn trail), `Inventory` (skills as rarity-tiered item slots), `Crafted` (projects as openable blueprints), `FieldNotes` (draggable ideas + experiment log), `Signal` (contact), `Footer`.
 

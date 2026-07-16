@@ -20,14 +20,39 @@
   --color-forest-soft: #5a9a6a;
 }
 
+/* Scroll-driven day→night cycle: 0 = day (white world), 1 = night (signal fire).
+   Driven from WorldCanvas via inline style on <html>. */
+@property --night {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
 :root {
-  --ink: #0c0d0c;
-  --ash: #6b6f6b;
-  --fog: #b9bdb7;
-  --line: #d9ddd5;
-  --paper: #fbfcf9;
+  --night: 0;
+  /* page-theme flip is steeper than the world's dusk: ink/paper crossfading
+     together collapses contrast at the midpoint, so pass through it quickly */
+  --pnight: clamp(0, (var(--night) - 0.42) * 5, 1);
+
+  --day-ink: #0c0d0c;
+  --day-ash: #6b6f6b;
+  --day-fog: #b9bdb7;
+  --day-line: #d9ddd5;
+  --day-paper: #fbfcf9;
+
+  --night-ink: #eef1ea;
+  --night-ash: #97a0a8;
+  --night-fog: #3c4454;
+  --night-line: #2b3342;
+  --night-paper: #0d1220;
+
+  --ink: color-mix(in oklab, var(--day-ink), var(--night-ink) calc(var(--pnight) * 100%));
+  --ash: color-mix(in oklab, var(--day-ash), var(--night-ash) calc(var(--pnight) * 100%));
+  --fog: color-mix(in oklab, var(--day-fog), var(--night-fog) calc(var(--pnight) * 100%));
+  --line: color-mix(in oklab, var(--day-line), var(--night-line) calc(var(--pnight) * 100%));
+  --paper: color-mix(in oklab, var(--day-paper), var(--night-paper) calc(var(--pnight) * 100%));
   --amber: #e8810b;
-  --forest: #2f6b3f;
+  --forest: color-mix(in oklab, #2f6b3f, #6fae7e calc(var(--pnight) * 100%));
 }
 
 * {
@@ -109,7 +134,6 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
-
 /* =================================================================== */
 /*  SURVIVAL HUD FURNITURE                                              */
 /* =================================================================== */
@@ -160,14 +184,14 @@ body {
 /*  PANELS / CARDS                                                      */
 /* =================================================================== */
 .panel {
-  background: rgba(251, 252, 249, 0.72);
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
   backdrop-filter: blur(8px) saturate(115%);
   -webkit-backdrop-filter: blur(8px) saturate(115%);
   border: 1.5px solid var(--ink);
 }
 
 .panel-soft {
-  background: rgba(251, 252, 249, 0.6);
+  background: color-mix(in srgb, var(--paper) 60%, transparent);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--line);
@@ -190,13 +214,13 @@ body {
 .slot {
   position: relative;
   border: 1.5px solid var(--line);
-  background: rgba(255,255,255,0.5);
+  background: color-mix(in srgb, var(--paper) 50%, transparent);
   transition: border-color .25s ease, transform .25s ease, background .25s ease;
 }
 .slot:hover {
   border-color: var(--ink);
   transform: translateY(-3px);
-  background: rgba(255,255,255,0.85);
+  background: color-mix(in srgb, var(--paper) 85%, transparent);
 }
 
 /* =================================================================== */
@@ -296,7 +320,8 @@ body {
   inset: 0;
   z-index: 9998;
   pointer-events: none;
-  opacity: 0.045;
+  /* multiply grain crushes dark backgrounds — fade it out as night rises */
+  opacity: calc(0.045 * (1 - var(--pnight) * 0.85));
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

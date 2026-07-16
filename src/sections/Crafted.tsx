@@ -7,6 +7,7 @@ const CAT_TAG: Record<Project["category"], string> = {
   SaaS: "STRUCTURE",
   Tool: "TOOL",
   Experiment: "PROTOTYPE",
+  App: "FIELD APP",
 };
 
 export function Crafted() {
