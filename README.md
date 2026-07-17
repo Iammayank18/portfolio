@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Mayank's Sketchbook Portfolio
 
-# Run and deploy your AI Studio app
+A single-page portfolio with an open-world-survival theme. Features a low-poly 3D diorama world, scroll-driven day/night cycle, and RPG-inspired UI.
 
-This contains everything you need to run your app locally.
+**Live:** [iammayank18.github.io](https://iammayank18.github.io)
 
-View your app in AI Studio: https://ai.studio/apps/eaf26929-44de-4e20-9dbc-7d4bd69deab6
+## Tech Stack
+
+- React 19 + TypeScript, built with Vite 6
+- Tailwind CSS v4
+- Three.js (vanilla) for the 3D background world
+- Framer Motion for declarative animations
+- GSAP + ScrollTrigger for scroll-driven animations
+- Lenis for smooth scrolling
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+```bash
+npm install
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+App runs at `http://localhost:3000`.
+
+## Deploy
+
+Pushing to `main` auto-deploys to GitHub Pages via GitHub Actions.
